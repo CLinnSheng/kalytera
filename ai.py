@@ -248,15 +248,6 @@ def main():
 
         results = rag.query(query)
         logging.info(print_result(query, results))
-        # print(f"Response: {results}")
-    # # Query
-    # queries = [
-    #     "Who should I contact regarding the import and exports restrictions of cryptographic technology between different countries?",
-    #     "Who is the owner of the cryptography management policy?"
-    # ]
-    # for query in queries:
-    #     results = rag.query(query)
-    #     logging.info(print_result(query, results))
 
 
 if __name__ == "__main__":
