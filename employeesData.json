@@ -1,0 +1,1254 @@
+[
+    {
+        "job_title": "Assistant Operations Executive (Depot Management)",
+        "years_of_experience": "2 years",
+        "email": "operations.assistant@company.com",
+        "qualifications": [
+            "Diploma in Logistics / Supply Chain Management",
+            "Other disciplines with experience in logistics operations management (preferable in 3rd party logistics, distribution or manufacturing environment)"
+        ],
+        "skillsets": [
+            "Proficiency in MS Office",
+            "Ability to work independently",
+            "Good communication skills",
+            "Monitor customer inventory and email correspondence",
+            "Monitor gate return and transshipment volumes",
+            "Handle equipment breakdowns",
+            "Coordinate RTG block activities",
+            "Respond to operational exceptions"
+        ],
+        "online_courses": [
+            "Microsoft Office 365 Essential Training",
+            "Logistics and Supply Chain Fundamentals",
+            "Effective Communication in the Workplace",
+            "Inventory Management for Logistics Professionals"
+        ]
+    },
+    {
+        "job_title": "Operations Executive / Senior Operations Executive (Port Ecosystem)",
+        "years_of_experience": "4 years",
+        "email": "port.operations@company.com",
+        "qualifications": [
+            "Degree in any discipline",
+            "Experience in logistics operations management (preferable in 3rd party logistics, trucking, distribution or manufacturing environment)"
+        ],
+        "skillsets": [
+            "Proficient in advanced MS Excel",
+            "Good communication and interpersonal skills",
+            "Ability to work independently",
+            "Critical thinking and analytical skills",
+            "Manage trucking permits and shipping documents",
+            "Conduct audit checks for compliance",
+            "Maintain ISO certification records",
+            "Work under pressure in changing environments"
+        ],
+        "online_courses": [
+            "Advanced Excel Skills for Data Analysis",
+            "Critical Thinking for Better Judgment and Decision-Making",
+            "ISO 9001: Quality Management System",
+            "Logistics and Trucking Operations Management"
+        ]
+    },
+    {
+        "job_title": "Senior Procurement Executive / Assistant Manager (Engineering Procurement)",
+        "years_of_experience": "3 years",
+        "email": "procurement.engineering@company.com",
+        "qualifications": [
+            "Degree in any discipline",
+            "Understanding of strategic sourcing, tendering, contract management and governance",
+            "Experience in sustainable procurement frameworks",
+            "Experience with e-procurement software (Ariba, Coupa, Oracle, Zycus)",
+            "CIPS certification (preferred)"
+        ],
+        "skillsets": [
+            "Excellent communication and negotiation skills",
+            "Contract drafting and management",
+            "Post-contract risk management",
+            "Collaboration with internal stakeholders",
+            "Drive innovation and change"
+        ],
+        "online_courses": [
+            "Strategic Sourcing and Procurement for Engineers",
+            "Contract Management Principles and Practices",
+            "Sustainable Procurement: Building a Better Future",
+            "Negotiation Skills for Procurement Professionals"
+        ]
+    },
+    {
+        "job_title": "Manager / Deputy Manager (OT Security Governance & Compliance)",
+        "years_of_experience": "5 years",
+        "email": "security.governance@company.com",
+        "qualifications": [
+            "Degree in Computer Engineering, Cybersecurity, or related fields",
+            "Cybersecurity experience in OT/ICS environments (preferred)",
+            "Relevant certifications (GICSP, CISSP, CISA, CISM)"
+        ],
+        "skillsets": [
+            "Knowledge of OT/IT security standards (NIST, IEC 62443, ISO27001/2)",
+            "Strong leadership and communication skills",
+            "Project management",
+            "Analytical and problem-solving skills"
+        ],
+        "online_courses": [
+            "OT and IT Security: Practical Applications",
+            "NIST Cybersecurity Framework Training",
+            "ISO 27001/27002 Information Security",
+            "Project Management Essentials for IT Professionals"
+        ]
+    },
+    {
+        "job_title": "Manager/Senior Manager (Commercial)",
+        "years_of_experience": "6 years",
+        "email": "commercial.manager@company.com",
+        "qualifications": [
+            "Degree in any discipline",
+            "Sales experience in Life Science, Healthcare, Industrial, Technology, Retail, Consumer, Chemical"
+        ],
+        "skillsets": [
+            "Proven track record in managing customer relationships",
+            "Sales lead generation and opportunity pursuit",
+            "Design pricing strategies",
+            "Market intelligence gathering",
+            "Strong interpersonal and negotiation skills",
+            "Adaptability and resilience"
+        ],
+        "online_courses": [
+            "Sales Management Foundations",
+            "Customer Relationship Management (CRM) for B2B Sales",
+            "Pricing Strategy for Products",
+            "Negotiation Skills for Sales Professionals"
+        ]
+    },
+    {
+        "job_title": "Assistant Manager/Deputy Manager (Commercial)",
+        "years_of_experience": "3 years",
+        "email": "assistant.manager@company.com",
+        "qualifications": [
+            "Degree in any discipline",
+            "Sales experience in Life Science, Healthcare, Industrial, Technology, Retail, Consumer, Chemical"
+        ],
+        "skillsets": [
+            "Proven customer relationship management",
+            "Sales lead generation and opportunity pursuit",
+            "Negotiation with customers",
+            "Coordination across teams (legal, finance, operations)",
+            "Strong interpersonal and communication skills",
+            "Critical thinking and problem-solving"
+        ],
+        "online_courses": [
+            "B2B Sales Foundations",
+            "Negotiation Strategies for Business Deals",
+            "Customer Success Management",
+            "Critical Thinking and Problem Solving for Business"
+        ]
+    },
+    {
+        "job_title": "ITE Scholarship - Infocomm Technology Track",
+        "years_of_experience": "1 year",
+        "email": "ite.scholarship@company.com",
+        "qualifications": [
+            "Current ITE student or within 12 months of graduation",
+            "Good academic performance"
+        ],
+        "skillsets": [
+            "Strong adaptability to dynamic work environments",
+            "Willingness to perform 24/7 standby",
+            "Hands-on experience through internships",
+            "Prepared for structured development programs"
+        ],
+        "online_courses": [
+            "Introduction to IT Project Management",
+            "Adaptive Learning and Growth in Dynamic Work Environments",
+            "Introduction to Standby Operations in IT"
+        ]
+    },
+    {
+        "job_title": "Polytechnic Scholarship - Infocomm Technology Track",
+        "years_of_experience": "1 year",
+        "email": "poly.scholarship@company.com",
+        "qualifications": [
+            "Current polytechnic student or within 12 months of graduation",
+            "Good academic performance in IT-related courses"
+        ],
+        "skillsets": [
+            "Proficiency in programming languages or IT systems",
+            "Analytical, communication, and teamwork skills",
+            "Adaptability to emerging technologies",
+            "Willingness to perform 24/7 standby or shift work"
+        ],
+        "online_courses": [
+            "Programming Fundamentals",
+            "Teamwork Skills for IT Professionals",
+            "Emerging Technologies and Their Impact on IT Systems",
+            "Shift Management and Adaptive Work Scheduling"
+        ]
+    },
+    {
+        "job_title": "Management Executive (Shared Services)",
+        "years_of_experience": 5,
+        "email": "shared.services@company.com",
+        "qualifications": "Possess a degree from a recognized university",
+        "skillsets": [
+            "Office management",
+            "Canteen management",
+            "Inventory management",
+            "Finance administration",
+            "Purchase administration",
+            "Team leadership",
+            "Multitasking",
+            "Collaboration",
+            "Microsoft Office"
+        ],
+        "online_courses": [
+            "Office Management Essentials",
+            "Inventory Management for Office Supplies",
+            "Finance and Contract Administration",
+            "Project Management and Team Leadership",
+            "Microsoft Office Proficiency: Word, Excel, PowerPoint"
+        ]
+    },
+    {
+        "job_title": "Deputy Manager (Port Ecosystem Commercial)",
+        "years_of_experience": 4,
+        "email": "port.ecosystem@company.com",
+        "qualifications": "Degree in any discipline",
+        "skillsets": [
+            "Sales",
+            "Pricing strategies",
+            "Process mapping",
+            "Contract negotiation",
+            "Market intelligence",
+            "Presentation",
+            "Pipeline management",
+            "Relationship management",
+            "Microsoft Office"
+        ],
+        "online_courses": [
+            "Sales Strategies and Negotiation Skills",
+            "Market Intelligence and Competitive Research",
+            "Process Mapping for Business Optimization",
+            "Effective Presentation and Communication Skills",
+            "Microsoft Office Proficiency: Word, Excel, PowerPoint"
+        ]
+    },
+    {
+        "job_title": "Assistant Manager/Deputy Manager (Corporate & Direct Purchase)",
+        "years_of_experience": 3,
+        "email": "corp.purchase@company.com",
+        "qualifications": "Possess a degree with at least 3 years of experience in sourcing and procurement",
+        "skillsets": [
+            "Strategic sourcing",
+            "Contract management",
+            "Contract negotiation",
+            "e-Procurement platforms",
+            "Communication",
+            "Collaboration",
+            "Innovation",
+            "Microsoft Office"
+        ],
+        "online_courses": [
+            "Strategic Sourcing and Procurement Management",
+            "Contract Negotiation and Management",
+            "Using e-Procurement Platforms (Ariba, Coupa, Oracle)",
+            "Communication Skills for Professionals",
+            "Microsoft Office Proficiency: Word, Excel, PowerPoint"
+        ]
+    },
+    {
+        "job_title": "AI Analyst (Simulation)",
+        "years_of_experience": 2,
+        "email": "ai.simulation@company.com",
+        "qualifications": "A good degree in Computer Science, Industrial & Systems Engineering, or related field",
+        "skillsets": [
+            "C++",
+            "Python",
+            "Discrete event simulation",
+            "Optimization",
+            "Problem-solving",
+            "Teamwork",
+            "Communication"
+        ],
+        "online_courses": [
+            "C++ Programming for AI",
+            "Python for Data Science and AI",
+            "Discrete Event Simulation and Modeling",
+            "Optimization Techniques in Engineering",
+            "Effective Problem-Solving in AI"
+        ]
+    },
+    {
+        "job_title": "Procurement Assistant",
+        "years_of_experience": 1,
+        "email": "procurement.assistant@company.com",
+        "qualifications": "Possess Diploma in any discipline",
+        "skillsets": [
+            "Purchasing",
+            "Microsoft Office",
+            "Time management",
+            "Negotiation",
+            "Communication"
+        ],
+        "online_courses": [
+            "Basics of Purchasing and Procurement",
+            "Time Management Essentials",
+            "Microsoft Office Proficiency: Word, Excel",
+            "Effective Negotiation Skills",
+            "Professional Communication Skills"
+        ]
+    },
+    {
+        "job_title": "Assistant Manager/Deputy Manager (Depot Management)",
+        "years_of_experience": 3,
+        "email": "depot.management@company.com",
+        "qualifications": "Good communication skills and analytical skills",
+        "skillsets": [
+            "Data handling",
+            "Stakeholder management",
+            "Communication",
+            "Team player",
+            "Legal contract basics",
+            "Microsoft Office"
+        ],
+        "online_courses": [
+            "Data Management and Analysis",
+            "Stakeholder Communication and Relationship Management",
+            "Understanding Legal Contracts",
+            "Microsoft Office Proficiency: Word, Excel, PowerPoint"
+        ]
+    },
+    {
+        "job_title": "Deputy Manager / Manager (Automobile Terminal)",
+        "years_of_experience": 5,
+        "email": "auto.terminal@company.com",
+        "qualifications": "Degree in a relevant field with experience in automobile terminal operations",
+        "skillsets": [
+            "Operational analysis",
+            "Business development",
+            "Team leadership",
+            "Customer relationship management",
+            "Safety compliance",
+            "Microsoft Office"
+        ],
+        "online_courses": [
+            "Automobile Terminal Operations and Management",
+            "Business Development Strategies",
+            "Leadership and Team Management",
+            "Customer Relationship Management",
+            "Safety Compliance and Best Practices"
+        ]
+    },
+    {
+        "job_title": "ITE Scholarship - Engineering Track",
+        "years_of_experience": 1,
+        "qualifications": "Pursuing/possessing Nitec or Higher Nitec in Electrical, Electronic, Mechanical, Mechatronics, or Automotive Technology/Engineering",
+        "skillsets": [
+            "Good academic results",
+            "Passion for technology and innovation",
+            "Dynamic work environment"
+        ],
+        "email": "engineeringtrack@company.com",
+        "online_courses_taken": [
+            "Introduction to Engineering",
+            "Basic Electrical Technology"
+        ]
+    },
+    {
+        "job_title": "Service Engineer (Digital Systems)",
+        "years_of_experience": 2,
+        "qualifications": "Diploma in Electronics, Electrical or Mechatronics Engineering",
+        "skillsets": [
+            "Maintenance methodology",
+            "Network and security systems",
+            "Comfortable working outdoors and at height"
+        ],
+        "email": "digitalserviceengineer@company.com",
+        "online_courses_taken": [
+            "Network Security Fundamentals",
+            "Digital Systems and Maintenance"
+        ]
+    },
+    {
+        "job_title": "Senior/Executive Service Engineer (M&E Services – Mechanical)",
+        "years_of_experience": 2,
+        "qualifications": "Diploma in Mechanical Engineering",
+        "skillsets": [
+            "Design and/or maintenance of M&E equipment"
+        ],
+        "email": "mechnicalservices@company.com",
+        "online_courses_taken": [
+            "Mechanical Engineering Design",
+            "M&E Equipment Maintenance"
+        ]
+    },
+    {
+        "job_title": "Assistant/Deputy Manager (Enterprise Risk & Resilience)",
+        "years_of_experience": 5,
+        "qualifications": "University degree holder",
+        "skillsets": [
+            "Risk governance processes",
+            "Data analytics",
+            "Operational risk management"
+        ],
+        "email": "riskmanager@company.com",
+        "online_courses_taken": [
+            "Risk Management Strategies",
+            "Data Analytics for Risk Management"
+        ]
+    },
+    {
+        "job_title": "Senior Service Engineer (Power Infrastructure)",
+        "years_of_experience": 2,
+        "qualifications": "Diploma in Electrical Engineering (Power), Licensed Electrical Worker (LEW) Grade 8",
+        "skillsets": [
+            "High-voltage electrical installation maintenance",
+            "Testing and installation projects"
+        ],
+        "email": "powerinfrastructure@company.com",
+        "online_courses_taken": [
+            "High-Voltage Engineering",
+            "Power Systems Maintenance"
+        ]
+    },
+    {
+        "job_title": "Senior Service Engineer (M&E Infrastructure)",
+        "years_of_experience": 2,
+        "qualifications": "Diploma in Electrical Engineering, Licensed Electrical Worker (LEW) Grade 8",
+        "skillsets": [
+            "Design and/or maintenance of electrical building services"
+        ],
+        "email": "meinfrastructure@company.com",
+        "online_courses_taken": [
+            "Building Services Engineering",
+            "Electrical Design and Maintenance"
+        ]
+    },
+    {
+        "job_title": "Assistant Management Executive / Deputy Management Executive (Payroll)",
+        "years_of_experience": 1,
+        "qualifications": "NITEC / Diploma qualifications in any discipline",
+        "skillsets": [
+            "Meticulous and detailed",
+            "Strong communications skills",
+            "Proficient with Excel"
+        ],
+        "email": "payrollmanager@company.com",
+        "online_courses_taken": [
+            "Payroll Management Essentials",
+            "Excel for Payroll"
+        ]
+    },
+    {
+        "job_title": "Electrical Engineer (Power Infrastructure)",
+        "years_of_experience": 2,
+        "qualifications": "Degree in Electrical Engineering",
+        "skillsets": [
+            "Electrical infrastructure maintenance",
+            "High voltage switching authorization"
+        ],
+        "email": "electricalengineer@company.com",
+        "online_courses_taken": [
+            "Advanced Power Systems",
+            "Electrical Infrastructure Design"
+        ]
+    },
+    {
+        "job_title": "Electrical Engineer (M&E Services)",
+        "years_of_experience": 2,
+        "qualifications": "Degree in Electrical Engineering",
+        "skillsets": [
+            "Maintenance and/or design of electrical building services",
+            "Licensed Electrical Worker (LEW) license"
+        ],
+        "email": "meservices@company.com",
+        "online_courses_taken": [
+            "Electrical Building Services",
+            "High Voltage Operation"
+        ]
+    },
+    {
+        "job_title": "Executive Planner (Civil Engineering)",
+        "years_of_experience": 1,
+        "qualifications": "Degree in Civil/Environmental Engineering or Architecture",
+        "skillsets": [
+            "Autodesk Revit",
+            "BIM tools",
+            "Green buildings design"
+        ],
+        "email": "civilengineerplanner@company.com",
+        "online_courses_taken": [
+            "BIM for Civil Engineers",
+            "Green Building Design"
+        ]
+    },
+    {
+        "job_title": "Port+ Assistant (Warehouse Operations Assistant)",
+        "years_of_experience": 1,
+        "qualifications": "N/A",
+        "skillsets": [
+            "Picking and packing parts",
+            "Re-packing and re-labeling",
+            "Delivering parts to customers"
+        ],
+        "email": "warehouseassistant@company.com",
+        "online_courses_taken": [
+            "Logistics and Warehouse Management",
+            "Supply Chain Fundamentals"
+        ]
+    },
+    {
+        "job_title": "Manager/Deputy Manager (Cybersecurity Incident Management)",
+        "years_of_experience": 5,
+        "qualifications": "Degree in Computer Engineering, Computer Science, Cybersecurity, Electrical & Electronics Engineering",
+        "skillsets": [
+            "Cybersecurity incident response",
+            "Forensic analysis",
+            "SIEM, IDS/IPS"
+        ],
+        "email": "cybersecuritymanager@company.com",
+        "online_courses_taken": [
+            "Incident Response and Cybersecurity",
+            "Advanced Forensic Analysis"
+        ]
+    },
+    {
+        "job_title": "Assistant Port+ Executive (Warehouse/ Freight)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": "Diploma in Logistics/ Supply Chain Management",
+        "skillsets": [
+            "MS Excel",
+            "Independent Work",
+            "Good Communication Skills",
+            "Logistics Operations Management"
+        ],
+        "online_courses_taken": [
+            "Introduction to Supply Chain Management",
+            "Excel for Beginners",
+            "Effective Communication Skills for Business"
+        ]
+    },
+    {
+        "job_title": "Company Driver",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": "Class 3 Driving License",
+        "skillsets": [
+            "Mini Bus Driving",
+            "English Speaking",
+            "Knowledge of Singapore Roads",
+            "Confidentiality"
+        ],
+        "online_courses_taken": [
+            "Road Safety and Defensive Driving",
+            "Basic English Communication"
+        ]
+    },
+    {
+        "job_title": "Global Management Associate",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": "Strong Academic Achievements in Any Discipline",
+        "skillsets": [
+            "Leadership",
+            "Analytical Skills",
+            "Problem-Solving Skills",
+            "Global Mindset"
+        ],
+        "online_courses_taken": [
+            "Leadership Essentials",
+            "Global Strategy and Leadership",
+            "Data Analytics for Business"
+        ]
+    },
+    {
+        "job_title": "Port+ Billing & Documentation Supervisor",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": "Diploma in Logistics / Supply Chain Management",
+        "skillsets": [
+            "MS Excel",
+            "Independent Work",
+            "Good Communication",
+            "Timeline Management"
+        ],
+        "online_courses_taken": [
+            "Introduction to Supply Chain Management",
+            "Excel for Beginners",
+            "Time Management for Professionals"
+        ]
+    },
+    {
+        "job_title": "Principal/Senior Engineer (Battery Energy Storage System)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": "Degree in Engineering, preferably Electrical/Electronic Engineering",
+        "skillsets": [
+            "Remote Terminal Unit",
+            "Power Conversion Systems",
+            "Battery Management Systems",
+            "PLC Control System"
+        ],
+        "online_courses_taken": [
+            "Battery Management Systems",
+            "Electrical Engineering Basics",
+            "PLC Programming"
+        ]
+    },
+    {
+        "job_title": "Senior Engineer / Engineer (System)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": "Degree in System Engineering, Software Engineering or other ICT-related fields",
+        "skillsets": [
+            "Vendor Management",
+            "System Development",
+            "Process Optimization",
+            "Data Support"
+        ],
+        "online_courses_taken": [
+            "Systems Engineering",
+            "Data Analysis and Visualization",
+            "Vendor Management Fundamentals"
+        ]
+    },
+    {
+        "job_title": "Container Handling Specialist (Prime Mover Driver)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": "Class 3/Class 4 Driving License",
+        "skillsets": [
+            "Prime Mover Driving",
+            "Operational Knowledge",
+            "Safety Protocols",
+            "Logistics"
+        ],
+        "online_courses_taken": [
+            "Driving Safety and Road Protocols",
+            "Logistics and Supply Chain Fundamentals"
+        ]
+    },
+    {
+        "job_title": "Technical Specialist (Digital Systems)- Card Repair Section",
+        "years_of_experience": 3,
+        "email": "placeholder@example.com",
+        "qualifications": "NITEC/Higher NITEC in Electronics/Mechatronics/Electrical/Mechanical Engineering",
+        "skillsets": [
+            "PCB Troubleshooting",
+            "Component-level Repair",
+            "Electrical Testing",
+            "Software Reflashing"
+        ],
+        "online_courses_taken": [
+            "PCB Troubleshooting and Repair",
+            "Multimeter and Oscilloscope Basics",
+            "Mechatronics Fundamentals"
+        ]
+    },
+    {
+        "job_title": "Engineer (Autonomous Vehicle)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": "Degree in Mechanical or Electrical Engineering",
+        "skillsets": [
+            "Autonomous Vehicle Testing",
+            "Data Collection and Analysis",
+            "Safety Compliance",
+            "Problem-solving"
+        ],
+        "online_courses_taken": [
+            "Autonomous Vehicle Systems",
+            "Data Visualization",
+            "Vehicle Testing and Safety Protocols"
+        ]
+    },
+    {
+        "job_title": "Service Engineer (Equipment Engineering)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": "Diploma in Electrical and/or Mechatronics Engineering",
+        "skillsets": [
+            "Equipment Maintenance",
+            "Outdoor Work",
+            "Safety at Height"
+        ],
+        "online_courses_taken": [
+            "Equipment Engineering Fundamentals",
+            "Safety Protocols for Outdoor Work"
+        ]
+    },
+    {
+        "job_title": "Inventory Planner",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": "NITEC in any discipline",
+        "skillsets": [
+            "Inventory Planning",
+            "MS Excel",
+            "Maximo and/or Oracle Fusion"
+        ],
+        "online_courses_taken": [
+            "Inventory Management Basics",
+            "Excel for Beginners",
+            "Introduction to Maximo"
+        ]
+    },
+    {
+        "job_title": "BIM Modeller",
+        "years_of_experience": 3,
+        "email": "placeholder@example.com",
+        "qualifications": "Diploma in Civil Engineering, Architecture or equivalent",
+        "skillsets": [
+            "AutoCAD 2D/3D",
+            "Revit",
+            "BIM Modelling for Infrastructure"
+        ],
+        "online_courses_taken": [
+            "AutoCAD 2D/3D",
+            "Revit for BIM",
+            "Infrastructure Modelling with BIM"
+        ]
+    },
+    {
+        "job_title": "Deputy Manager / Manager (Green Mobility)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": "Degree in Electrical or Chemical Engineering",
+        "skillsets": [
+            "Battery System Design",
+            "Battery Lifespan Optimization",
+            "Failure Analysis",
+            "Battery Management"
+        ],
+        "online_courses_taken": [
+            "Battery Design and Integration",
+            "Battery Management Systems",
+            "Green Energy and Sustainability"
+        ]
+    },
+    {
+        "job_title": "Deputy Manager (Sustainability)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": "Degree in Engineering or a Science-based discipline",
+        "skillsets": [
+            "Sustainability",
+            "Conceptualization",
+            "Problem-solving",
+            "Green Future Initiatives"
+        ],
+        "online_courses_taken": [
+            "Sustainability and Green Practices",
+            "Problem Solving for Sustainability",
+            "Green Technology and Innovation"
+        ]
+    },
+    {
+        "job_title": "HSS Duty Manager",
+        "years_of_experience": 5,
+        "email": "placeholder@example.com",
+        "qualifications": "Polytechnic Diploma or Degree",
+        "skillsets": [
+            "Emergency Response",
+            "Fire Awareness Training",
+            "Incident Escalation",
+            "Security Service Management"
+        ],
+        "online_courses_taken": [
+            "Emergency Response Training",
+            "Security and Fire Safety Management",
+            "Incident Escalation Procedures"
+        ]
+    },
+    {
+        "job_title": "Engineer (Smart System Solutions – Smart Engineering)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": "Degree in Electrical / Mechanical / Mechatronics / Computer / System Engineering",
+        "skillsets": [
+            "Big Data Processing",
+            "SQL/HiveQL",
+            "Power BI",
+            "Python Programming"
+        ],
+        "online_courses_taken": [
+            "Python for Data Processing",
+            "SQL and HiveQL Basics",
+            "Big Data Analytics"
+        ]
+    },
+    {
+        "job_title": "Civil Engineer / Architect",
+        "years_of_experience": 3,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Degree in Civil Engineering / Environmental Engineering / Architecture"
+        ],
+        "skillsets": [
+            "Project Management",
+            "BIM Modelling",
+            "Green Building Design"
+        ],
+        "online_courses_taken": [
+            "BIM for Beginners",
+            "Sustainable Architecture"
+        ]
+    },
+    {
+        "job_title": "Operations Assistant (Tuas Customer Service Coordinator)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Minimum GCE 'O' Levels or NITEC in any discipline"
+        ],
+        "skillsets": [
+            "Customer Service",
+            "Attention to Detail",
+            "Organizational Skills"
+        ],
+        "online_courses_taken": [
+            "Customer Service Essentials",
+            "Excel Basics"
+        ]
+    },
+    {
+        "job_title": "Container Equipment Specialist (Yard Crane)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [],
+        "skillsets": [
+            "Heavy Equipment Operation",
+            "Safety Protocols"
+        ],
+        "online_courses_taken": [
+            "Heavy Equipment Operation Safety",
+            "Crane Operations"
+        ]
+    },
+    {
+        "job_title": "Accounts Executive (Billing)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Diploma in Accountancy or equivalent"
+        ],
+        "skillsets": [
+            "Analytical Skills",
+            "Interpersonal Skills",
+            "Organizational Skills"
+        ],
+        "online_courses_taken": [
+            "Accounting Basics",
+            "Financial Analysis"
+        ]
+    },
+    {
+        "job_title": "Chemist",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Degree in Chemistry"
+        ],
+        "skillsets": [
+            "Laboratory Skills",
+            "Analytical Skills"
+        ],
+        "online_courses_taken": [
+            "Basic Chemistry Techniques",
+            "Analytical Chemistry"
+        ]
+    },
+    {
+        "job_title": "Assistant Manager / Deputy Manager (IT Procurement)",
+        "years_of_experience": 3,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Degree with at least 3 years’ of experience in sourcing and procurement"
+        ],
+        "skillsets": [
+            "Contract Negotiation",
+            "Stakeholder Management"
+        ],
+        "online_courses_taken": [
+            "Strategic Sourcing",
+            "Contract Management"
+        ]
+    },
+    {
+        "job_title": "Assistant HR Executive / Deputy HR Executive (HR Excellence)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Diploma in Human Resources or a related field"
+        ],
+        "skillsets": [
+            "HR Operations",
+            "Attention to Detail"
+        ],
+        "online_courses_taken": [
+            "HR Fundamentals",
+            "HRIS Training"
+        ]
+    },
+    {
+        "job_title": "Operations Supervisor (ChemCare)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Higher NITEC / NITEC in any discipline"
+        ],
+        "skillsets": [
+            "Operations Management",
+            "Leadership"
+        ],
+        "online_courses_taken": [
+            "Operations Management Basics",
+            "Leadership Skills"
+        ]
+    },
+    {
+        "job_title": "HR Recruitment Coordinator (6 months contract with possible extension/conversion)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "NITEC qualifications"
+        ],
+        "skillsets": [
+            "Recruitment Processes",
+            "Organizational Skills"
+        ],
+        "online_courses_taken": [
+            "Recruitment Essentials",
+            "MS Office for HR Professionals"
+        ]
+    },
+    {
+        "job_title": "Data Engineer",
+        "years_of_experience": 2,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Bachelor’s degree in Computer Science or Computer Engineering"
+        ],
+        "skillsets": [
+            "ETL Processes",
+            "Database Management"
+        ],
+        "online_courses_taken": [
+            "Data Engineering with Python",
+            "SQL for Data Science"
+        ]
+    },
+    {
+        "job_title": "Systems Engineer / Assistant Manager / Deputy Manager (Systems)",
+        "years_of_experience": 3,
+        "email": "placeholder@example.com",
+        "qualifications": [],
+        "skillsets": [
+            "IT Infrastructure Management",
+            "System Design"
+        ],
+        "online_courses_taken": [
+            "IT Infrastructure Basics",
+            "System Architecture"
+        ]
+    },
+    {
+        "job_title": "Operations Supervisor (Gate Operations)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "At least 3 ‘O’ level credits, NITEC, ITC or equivalent"
+        ],
+        "skillsets": [
+            "Operations Coordination",
+            "Shift Management"
+        ],
+        "online_courses_taken": [
+            "Operations Management Basics",
+            "Shift Scheduling"
+        ]
+    },
+    {
+        "job_title": "Senior Human Resource Executive (Staff Benefits)",
+        "years_of_experience": 3,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Degree in any discipline"
+        ],
+        "skillsets": [
+            "Employment Law",
+            "Communication Skills"
+        ],
+        "online_courses_taken": [
+            "Employment Law Fundamentals",
+            "HR Communication Skills"
+        ]
+    },
+    {
+        "job_title": "IT Technician",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "NITEC in Electronics (Computer & Networking) or Higher NITEC in Information technology"
+        ],
+        "skillsets": [
+            "PC Support",
+            "Network Equipment Support"
+        ],
+        "online_courses_taken": [
+            "PC Support Essentials",
+            "Networking Basics"
+        ]
+    },
+    {
+        "job_title": "Port+ Operations Operator (with warehouse forklift license / reach truck experience)",
+        "years_of_experience": 3,
+        "email": "placeholder@example.com",
+        "qualifications": [],
+        "skillsets": [
+            "Forklift Operation",
+            "Warehouse Management"
+        ],
+        "online_courses_taken": [
+            "Forklift Operation Safety",
+            "Warehouse Management Basics"
+        ]
+    },
+    {
+        "job_title": "Inventory Management Assistant",
+        "years_of_experience": 2,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "NITEC in Engineering, Logistics / Supply Chain or equivalent"
+        ],
+        "skillsets": [
+            "Inventory Management",
+            "Logistics Practices"
+        ],
+        "online_courses_taken": [
+            "Inventory Management Fundamentals",
+            "Logistics Basics"
+        ]
+    },
+    {
+        "job_title": "Port+ Assistant (Warehouse Operations Assistant)",
+        "years_of_experience": 2,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "NITEC / GCE 'O' Level qualifications"
+        ],
+        "skillsets": [
+            "Warehouse Operations",
+            "Multitasking"
+        ],
+        "online_courses_taken": [
+            "Warehouse Operations Basics",
+            "Time Management Skills"
+        ]
+    },
+    {
+        "job_title": "Operations Supervisor (Yard Planning)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Higher NITEC / NITEC in any discipline"
+        ],
+        "skillsets": [
+            "Yard Management",
+            "Operational Planning"
+        ],
+        "online_courses_taken": [
+            "Yard Management Essentials",
+            "Operational Planning Skills"
+        ]
+    },
+    {
+        "job_title": "Lashing Specialist",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [],
+        "skillsets": [
+            "Lashing Techniques",
+            "Heavy Lifting"
+        ],
+        "online_courses_taken": [
+            "Lashing Techniques Basics",
+            "Heavy Equipment Safety"
+        ]
+    },
+    {
+        "job_title": "Operations Executive",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Degree in any discipline"
+        ],
+        "skillsets": [
+            "Leadership Skills",
+            "Communication Skills"
+        ],
+        "online_courses_taken": [
+            "Leadership Development",
+            "Effective Communication Skills"
+        ]
+    },
+    {
+        "job_title": "Senior Manager (Business Development/M&A - SEA Indonesia)",
+        "years_of_experience": 10,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Degree in Accounting, Business, Economics, Engineering, Finance, IT or equivalent"
+        ],
+        "skillsets": [
+            "Business Development",
+            "Stakeholder Management"
+        ],
+        "online_courses_taken": [
+            "Business Development Strategies",
+            "Advanced Stakeholder Management"
+        ]
+    },
+    {
+        "job_title": "Emergency Response Specialist",
+        "years_of_experience": 3,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Degree in Environmental Science or Safety Management"
+        ],
+        "skillsets": [
+            "Emergency Response Planning",
+            "Crisis Management"
+        ],
+        "online_courses_taken": [
+            "Crisis Management Essentials",
+            "Emergency Response Planning"
+        ]
+    },
+    {
+        "job_title": "Assistant Manager (Asset Management)",
+        "years_of_experience": 3,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Degree in Finance, Business, or related fields"
+        ],
+        "skillsets": [
+            "Asset Management",
+            "Financial Analysis"
+        ],
+        "online_courses_taken": [
+            "Asset Management Basics",
+            "Financial Analysis for Managers"
+        ]
+    },
+    {
+        "job_title": "Civil Technical Officer (Building Management)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Diploma in Civil Engineering"
+        ],
+        "skillsets": [
+            "Building Maintenance",
+            "Project Management"
+        ],
+        "online_courses_taken": [
+            "Building Management Basics",
+            "Project Management Fundamentals"
+        ]
+    },
+    {
+        "job_title": "Senior Executive / Assistant Manager (Finance & Procurement)",
+        "years_of_experience": 3,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Degree in Finance or Accounting"
+        ],
+        "skillsets": [
+            "Financial Analysis",
+            "Procurement Processes"
+        ],
+        "online_courses_taken": [
+            "Financial Analysis Techniques",
+            "Procurement Fundamentals"
+        ]
+    },
+    {
+        "job_title": "HR Executive / Assistant Manager (Training & Development)",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Degree in Human Resource Management"
+        ],
+        "skillsets": [
+            "Training Development",
+            "Performance Management"
+        ],
+        "online_courses_taken": [
+            "Training Program Development",
+            "Performance Management Skills"
+        ]
+    },
+    {
+        "job_title": "Quality Assurance Executive",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Degree in relevant field"
+        ],
+        "skillsets": [
+            "Quality Assurance Processes",
+            "Attention to Detail"
+        ],
+        "online_courses_taken": [
+            "Quality Management Fundamentals",
+            "ISO Standards"
+        ]
+    },
+    {
+        "job_title": "Environmental Officer",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Degree in Environmental Science or related field"
+        ],
+        "skillsets": [
+            "Environmental Regulations",
+            "Sustainability Practices"
+        ],
+        "online_courses_taken": [
+            "Environmental Management Systems",
+            "Sustainability Practices"
+        ]
+    },
+    {
+        "job_title": "Warehouse Supervisor",
+        "years_of_experience": 3,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Diploma in Logistics or Supply Chain Management"
+        ],
+        "skillsets": [
+            "Warehouse Management",
+            "Leadership"
+        ],
+        "online_courses_taken": [
+            "Warehouse Management Basics",
+            "Leadership Skills in Logistics"
+        ]
+    },
+    {
+        "job_title": "Logistics Coordinator",
+        "years_of_experience": 1,
+        "email": "placeholder@example.com",
+        "qualifications": [
+            "Degree in Logistics or Business Administration"
+        ],
+        "skillsets": [
+            "Logistics Planning",
+            "Coordination Skills"
+        ],
+        "online_courses_taken": [
+            "Logistics and Supply Chain Management",
+            "Coordinating Logistics Operations"
+        ]
+    }
+]
