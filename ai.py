@@ -12,6 +12,7 @@ from typing import List
 from enum import Enum
 import logging
 import os
+import csv
 
 
 class LLMProvider(Enum):
@@ -46,23 +47,56 @@ class RAGSingleton:
         self.embeddings = self.initialize_embeddings(provider=LLMProvider.GEMINI)
         self.persist_directory = persist_directory
 
-    def load_pdf(self, file_path):
-        logging.debug(f"Loading PDF: {file_path}")
-        loader = PyPDFLoader(file_path)
-        return loader.load()
+    # def load_pdf(self, file_path):
+    #     logging.debug(f"Loading PDF: {file_path}")
+    #     loader = PyPDFLoader(file_path)
+    #     return loader.load()
 
-    def load_pdfs_from_directory(self, directory_path):
-        logging.debug(f"Loading PDFs from directory: {directory_path}")
-        pdfs: List[Document] = []
+    # def load_pdfs_from_directory(self, directory_path):
+    #     logging.debug(f"Loading PDFs from directory: {directory_path}")
+    #     pdfs: List[Document] = []
+    #     for filename in os.listdir(directory_path):
+    #         if not filename.endswith(".pdf"):
+    #             continue
+
+    #         file_path = os.path.join(directory_path, filename)
+    #         pdf = self.load_pdf(file_path)
+    #         pdfs.extend(pdf)
+    #     return pdfs
+    
+    def load_csv(self, file_path: str) -> List[Document]:
+        logging.debug(f"Loading CSV: {file_path}")
+        documents = []
+        try:
+            with open(file_path, 'r', newline='', encoding='utf-8') as csvfile:
+                reader = csv.DictReader(csvfile)
+                for row in reader:
+                    # Convert row to a string representation
+                    content = "\n".join([f"{k}: {v}" for k, v in row.items()])
+                    
+                    # Create a Document object
+                    doc = Document(
+                        page_content=content,
+                        metadata={
+                            "source": file_path,
+                            "row": reader.line_num - 1  # Subtract 1 to account for header
+                        }
+                    )
+                    documents.append(doc)
+        except Exception as e:
+            logging.error(f"Error loading CSV {file_path}: {str(e)}")
+        return documents
+
+    def load_csvs_from_directory(self, directory_path: str) -> List[Document]:
+        logging.debug(f"Loading CSVs from directory: {directory_path}")
+        all_documents = []
         for filename in os.listdir(directory_path):
-            if not filename.endswith(".pdf"):
-                continue
-
-            file_path = os.path.join(directory_path, filename)
-            pdf = self.load_pdf(file_path)
-            pdfs.extend(pdf)
-        return pdfs
-
+            if filename.endswith(".csv"):
+                file_path = os.path.join(directory_path, filename)
+                documents = self.load_csv(file_path)
+                all_documents.extend(documents)
+        return all_documents
+    
     def initialize_llm(self, provider: LLMProvider = LLMProvider.OLLAMA, **kwargs):
         logging.debug("Initializing LLM")
         if provider == LLMProvider.GEMINI:    
@@ -168,6 +202,7 @@ class RAGSingleton:
         system_prompt = """
 *Who you are:*
 You are a helpful and informative chatbot that answers questions using text from the reference passage included below. 
+Your job is to help people to upskills themselves by giving them suggestion so that they can be a more competitive candidate in job application.
 Respond in a complete sentence and make sure that your response is easy to understand for everyone. 
 Maintain a friendly and conversational tone. If the passage is irrelevant, feel free to ignore it.
 
@@ -198,24 +233,52 @@ Maintain a friendly and conversational tone. If the passage is irrelevant, feel 
                 return_source_documents=True,
             )
 
-    def query(self, input_text):
-        if not self.rag_chain:
-            raise ValueError(
-                "RAG chain not initialized. Call create_rag_chain() first.")
+    # def query(self, input_text):
+    #     if not self.rag_chain:
+    #         raise ValueError(
+    #             "RAG chain not initialized. Call create_rag_chain() first.")
 
-        result = self.rag_chain.invoke({"question": input_text})
-        result['cleaned_sources'] = list(set(
-            [f"File: {doc.metadata['source']} (p. {doc.metadata['page'] + 1})" for doc in result['source_documents']]))
-        result['answer'] = result['answer'].strip()
-        return result
+    #     result = self.rag_chain.invoke({"question": input_text})
+    #     result['cleaned_sources'] = list(set(
+    #         [f"File: {doc.metadata['source']} (p. {doc.metadata['page'] + 1})" for doc in result['source_documents']]))
+    #     result['answer'] = result['answer'].strip()
+    #     return result
 
+    def query(self, cur_work, new_work, skills):
+            input_text = f"""
+I am a {cur_work} and I wish to be a {new_work}. The skillsets that I have are {skills}. What else should I learn to 
+accomplish my goal? On top of that, suggest me resources for me to learn the required additional skills.
+"""
 
-def print_result(query, result):
+            if not self.rag_chain:
+                raise ValueError(
+                    "RAG chain not initialized. Call create_rag_chain() first.")
+
+            result = self.rag_chain.invoke({"question": input_text})
+            result['cleaned_sources'] = list(set(
+                [self.format_source_info(doc) for doc in result['source_documents']]))
+            result['answer'] = result['answer'].strip()
+            return result
+    
+    def format_source_info(self, doc):
+        source = doc.metadata.get('source', 'Unknown source')
+        if 'page' in doc.metadata:
+            return f"File: {source} (p. {doc.metadata['page'] + 1})"
+        elif 'row' in doc.metadata:
+            return f"File: {source} (row {doc.metadata['row'] + 1})"
+        else:
+            return f"File: {source}"
+
+def print_result(cur_work, new_work, skills, result):
     relevant_sources = '\n'.join(result['cleaned_sources'])
 
     output_text = f"""\n
-### Question:
-{query}\n
+### What is your current occupation?
+{cur_work}\n
+### What job do you wish to transition into?
+{new_work}\n
+### What skills do you have?
+{skills}\n
 ### Answer:
 {result['answer'].strip()}\n
 ### Sources:
@@ -225,12 +288,19 @@ def print_result(query, result):
     """
     return (output_text)
 
+def get_user_input():
+    print("Please answer the following questions:")
+    cur_work = input("What is your current occupation? ")
+    new_work = input("What job do you wish to transition into? ")
+    skills = input("What skills do you have? ")
+    return cur_work, new_work, skills
+
 
 def main():
     rag = RAGSingleton()
 
     # Load PDF
-    docs = rag.load_pdfs_from_directory("data")
+    docs = rag.load_csvs_from_directory("data")
     logging.info(f"Number of documents: {len(docs)}")
 
     # Initialize LLM
@@ -242,12 +312,15 @@ def main():
     # Create RAG chain
     rag.create_rag_chain(chain_type=ChainType.STUFF)
 
-    print("How can kalytera help?")
     while True:
-        query = input("")
+        cur_work, new_work, skills = get_user_input()
+        
+        results = rag.query(cur_work, new_work, skills)
+        logging.info(print_result(cur_work, new_work, skills, results))
 
-        results = rag.query(query)
-        logging.info(print_result(query, results))
+        new_query = input("Do you have other queries? (y/n): ").lower()
+        if new_query != 'y':
+            break
 
 
 if __name__ == "__main__":
