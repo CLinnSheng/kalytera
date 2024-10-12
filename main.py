@@ -1,0 +1,99 @@
+import streamlit as st
+
+st.set_page_config(initial_sidebar_state="collapsed", layout="wide")
+
+if "name" not in st.session_state:
+    st.session_state["name"] = ""
+
+if "skill" not in st.session_state:
+    st.session_state["skill"] = ""
+
+if "current_position" not in st.session_state:
+    st.session_state["current_position"] = ""
+#
+# st.title("Simple Streamlit App")
+#
+# name = st.text_input("Enter name:", st.session_state["name"])
+# colour = st.selectbox("Select your favourite colour", ["", "Red", "Green", "Blue"])
+#
+# submit = st.button("Submit")
+# if submit:
+#     st.session_state["name"] = name
+#     st.session_state["colour"] = colour
+#     st.switch_page("pages/Profile.py")
+#     st.write(f"You have entered {name} and favourite colour is {colour}")
+# Set up page layout to be wide
+# st.set_page_config(layout="wide")
+
+# Custom CSS to style the left column with a background image
+st.markdown(
+    """
+    <style>
+    .stMainBlockContainer {
+        background-color: rgba(0, 0, 0, 0);
+        padding-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+    
+    
+    .left-column {
+        background-image: url('https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg'); /* Replace this URL with your own image */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba(0, 0, 0, 0);
+        height: 97vh; /* Full height */
+        padding: 0; 
+        margin: 0;
+        border-radius: 10px;
+    }
+    
+    .right-column {
+        padding: 0px;
+    }
+    
+    [data-testid="stMain"] div:first-child{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    [data-testid="stHeader"]{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+def main():
+    # Divide the page into two columns
+    col1, col2 = st.columns([2, 1], gap="small", vertical_alignment="center")  # You can adjust the ratio [1, 1.5] to change the column sizes
+
+    # Left column for the image (background image applied with CSS)
+    with col1:
+        st.markdown('<div class="left-column"></div>', unsafe_allow_html=True)
+
+    # Right column for input fields
+    with col2:
+        st.title("Simple Streamlit App")
+
+        skill = st.text_input("Enter skill to learn:", st.session_state["skill"])
+        current_position = st.text_input("What is your current position?", st.session_state["current_position"])
+
+        submit = st.button("Submit")
+        if submit:
+            if not skill.strip() or not current_position.strip():
+                st.warning("Please fill in all fields!")
+
+            else:
+                st.session_state["skill"] = skill
+                st.session_state["current_position"] = current_position
+                st.switch_page("pages/Profile.py")
+                st.write(f"Hello {name} and {test}!")
+                st.write(f"Skill to learn is {skill} and current job is {current_position}")
+
+
+if __name__ == "__main__":
+    main()
