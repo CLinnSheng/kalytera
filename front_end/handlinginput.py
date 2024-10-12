@@ -1,24 +1,35 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS  # Import CORS
+from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app)
 
-# Route to handle login
 @app.route('/login', methods=['POST'])
 def login():
-    data = request.get_json()  # Get JSON data from the request
+    data = request.get_json()
     email = data.get('email')
     password = data.get('password')
     
-    # You can now process the email and password, for example, by checking them against a database
-    print(f"Email: {email}, Password: {password}")
+    print(f"Received login attempt - Email: {email}, Password: {password}")
     
-    # Dummy logic for demonstration
+    # Simple validation (replace with your actual authentication logic)
     if email == "admin@example.com" and password == "password123":
-        return jsonify({"message": "Login successful"}), 200
+        response = {
+            "status": "success",
+            "message": "Login successful",
+            "user": {
+                "email": email,
+                "name": "Admin User"
+            }
+        }
     else:
-        return jsonify({"message": "Invalid credentials"}), 401
+        response = {
+            "status": "failed",
+            "message": "Invalid credentials"
+        }
+    
+    print(f"Sending response: {response}")
+    return jsonify(response)
 
 if __name__ == '__main__':
     app.run(debug=True)

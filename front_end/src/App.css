@@ -125,3 +125,19 @@ body {
 }
 
 
+.message {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.success {
+  background-color: #d4edda; /* Light green background for success */
+  color: #155724; /* Dark green text for success */
+}
+
+.error {
+  background-color: #f8d7da; /* Light red background for error */
+  color: #721c24; /* Dark red text for error */
+}
