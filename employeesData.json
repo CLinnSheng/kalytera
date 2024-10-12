@@ -1,4 +1,4 @@
-{
+[
     {
     "job_title": "Assistant Operations Executive (Depot Management)",
     "years_of_experience": "2 years",
@@ -182,8 +182,7 @@
         "Emerging Technologies and Their Impact on IT Systems",
         "Shift Management and Adaptive Work Scheduling"
     ]
-    },
-    {
+    },  {
         "job_title": "Management Executive (Shared Services)",
         "years_of_experience": 5,
         "email": "shared.services@company.com",
@@ -336,161 +335,6 @@
           "Customer Relationship Management",
           "Safety Compliance and Best Practices"
         ]
-      },
-      {
-        "job_title": "Management Executive (Shared Services)",
-        "years_of_experience": 5,
-        "email": "shared.services@company.com",
-        "qualifications": "Possess a degree from a recognized university",
-        "skillsets": [
-          "Office management",
-          "Canteen management",
-          "Inventory management",
-          "Finance administration",
-          "Purchase administration",
-          "Team leadership",
-          "Multitasking",
-          "Collaboration",
-          "Microsoft Office"
-        ],
-        "online_courses": [
-          "Office Management Essentials",
-          "Inventory Management for Office Supplies",
-          "Finance and Contract Administration",
-          "Project Management and Team Leadership",
-          "Microsoft Office Proficiency: Word, Excel, PowerPoint"
-        ]
-      },
-      {
-        "job_title": "Deputy Manager (Port Ecosystem Commercial)",
-        "years_of_experience": 4,
-        "email": "port.ecosystem@company.com",
-        "qualifications": "Degree in any discipline",
-        "skillsets": [
-          "Sales",
-          "Pricing strategies",
-          "Process mapping",
-          "Contract negotiation",
-          "Market intelligence",
-          "Presentation",
-          "Pipeline management",
-          "Relationship management",
-          "Microsoft Office"
-        ],
-        "online_courses": [
-          "Sales Strategies and Negotiation Skills",
-          "Market Intelligence and Competitive Research",
-          "Process Mapping for Business Optimization",
-          "Effective Presentation and Communication Skills",
-          "Microsoft Office Proficiency: Word, Excel, PowerPoint"
-        ]
-      },
-      {
-        "job_title": "Assistant Manager/Deputy Manager (Corporate & Direct Purchase)",
-        "years_of_experience": 3,
-        "email": "corp.purchase@company.com",
-        "qualifications": "Possess a degree with at least 3 years of experience in sourcing and procurement",
-        "skillsets": [
-          "Strategic sourcing",
-          "Contract management",
-          "Contract negotiation",
-          "e-Procurement platforms",
-          "Communication",
-          "Collaboration",
-          "Innovation",
-          "Microsoft Office"
-        ],
-        "online_courses": [
-          "Strategic Sourcing and Procurement Management",
-          "Contract Negotiation and Management",
-          "Using e-Procurement Platforms (Ariba, Coupa, Oracle)",
-          "Communication Skills for Professionals",
-          "Microsoft Office Proficiency: Word, Excel, PowerPoint"
-        ]
-      },
-      {
-        "job_title": "AI Analyst (Simulation)",
-        "years_of_experience": 2,
-        "email": "ai.simulation@company.com",
-        "qualifications": "A good degree in Computer Science, Industrial & Systems Engineering, or related field",
-        "skillsets": [
-          "C++",
-          "Python",
-          "Discrete event simulation",
-          "Optimization",
-          "Problem-solving",
-          "Teamwork",
-          "Communication"
-        ],
-        "online_courses": [
-          "C++ Programming for AI",
-          "Python for Data Science and AI",
-          "Discrete Event Simulation and Modeling",
-          "Optimization Techniques in Engineering",
-          "Effective Problem-Solving in AI"
-        ]
-      },
-      {
-        "job_title": "Procurement Assistant",
-        "years_of_experience": 1,
-        "email": "procurement.assistant@company.com",
-        "qualifications": "Possess Diploma in any discipline",
-        "skillsets": [
-          "Purchasing",
-          "Microsoft Office",
-          "Time management",
-          "Negotiation",
-          "Communication"
-        ],
-        "online_courses": [
-          "Basics of Purchasing and Procurement",
-          "Time Management Essentials",
-          "Microsoft Office Proficiency: Word, Excel",
-          "Effective Negotiation Skills",
-          "Professional Communication Skills"
-        ]
-      },
-      {
-        "job_title": "Assistant Manager/Deputy Manager (Depot Management)",
-        "years_of_experience": 3,
-        "email": "depot.management@company.com",
-        "qualifications": "Good communication skills and analytical skills",
-        "skillsets": [
-          "Data handling",
-          "Stakeholder management",
-          "Communication",
-          "Team player",
-          "Legal contract basics",
-          "Microsoft Office"
-        ],
-        "online_courses": [
-          "Data Management and Analysis",
-          "Stakeholder Communication and Relationship Management",
-          "Understanding Legal Contracts",
-          "Microsoft Office Proficiency: Word, Excel, PowerPoint"
-        ]
-      },
-      {
-        "job_title": "Deputy Manager / Manager (Automobile Terminal)",
-        "years_of_experience": 5,
-        "email": "auto.terminal@company.com",
-        "qualifications": "Degree in a relevant field with experience in automobile terminal operations",
-        "skillsets": [
-          "Operational analysis",
-          "Business development",
-          "Team leadership",
-          "Customer relationship management",
-          "Safety compliance",
-          "Microsoft Office"
-        ],
-        "online_courses": [
-          "Automobile Terminal Operations and Management",
-          "Business Development Strategies",
-          "Leadership and Team Management",
-          "Customer Relationship Management",
-          "Safety Compliance and Best Practices"
-        ]
-      }
-    
-}
+    }
+]
   
