@@ -1,0 +1,6 @@
+/.env
+/cert.json
+/chroma
+/data
+/rag.py
+/venv
