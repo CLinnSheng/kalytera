@@ -1,4 +1,5 @@
 import streamlit as st
+from ai import ai
 
 st.set_page_config(initial_sidebar_state="collapsed", layout="wide")
 
@@ -10,6 +11,9 @@ if "skill" not in st.session_state:
 
 if "current_position" not in st.session_state:
     st.session_state["current_position"] = ""
+
+if "new_position" not in st.session_state:
+    st.session_state["new_position"] = ""
 #
 # st.title("Simple Streamlit App")
 #
@@ -79,9 +83,10 @@ def main():
     with col2:
         st.title("Simple Streamlit App")
 
-        skill = st.text_input("Enter skill to learn:", st.session_state["skill"])
         current_position = st.text_input("What is your current position?", st.session_state["current_position"])
-
+        new_position = st.text_input("What job do you wish to transition into?", st.session_state["new_position"])
+        skill = st.text_input("What skills do you have?", st.session_state["skill"])
+        
         submit = st.button("Submit")
         if submit:
             if not skill.strip() or not current_position.strip():
@@ -90,9 +95,20 @@ def main():
             else:
                 st.session_state["skill"] = skill
                 st.session_state["current_position"] = current_position
+                st.session_state["new_position"] = new_position
+                response = ai(current_position, new_position, skill)
                 st.switch_page("pages/Profile.py")
                 st.write(f"Hello {name} and {test}!")
-                st.write(f"Skill to learn is {skill} and current job is {current_position}")
+                st.write(f"""
+Current job: {current_position}\n
+Desired job: {new_position}\n
+Existing skills: {skill}\n
+\n
+\n
+Advices:\n 
+{response}
+""")
+            
 
 
 if __name__ == "__main__":

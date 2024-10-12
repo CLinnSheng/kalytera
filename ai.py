@@ -10,9 +10,13 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.documents import Document
 from typing import List
 from enum import Enum
+from dotenv import load_dotenv
 import logging
 import os
 import csv
+import json
+import traceback
+import sys
 
 
 class LLMProvider(Enum):
@@ -47,36 +51,43 @@ class RAGSingleton:
         self.embeddings = self.initialize_embeddings(provider=LLMProvider.GEMINI)
         self.persist_directory = persist_directory
     
-    def load_csv(self, file_path: str) -> List[Document]:
-        logging.debug(f"Loading CSV: {file_path}")
+    def load_json(self, file_path: str) -> List[Document]:
+        logging.debug(f"Loading JSON: {file_path}")
         documents = []
         try:
-            with open(file_path, 'r', newline='', encoding='utf-8') as csvfile:
-                reader = csv.DictReader(csvfile)
-                for row in reader:
-                    # Convert row to a string representation
-                    content = "\n".join([f"{k}: {v}" for k, v in row.items()])
-                    
-                    # Create a Document object
+            with open(file_path, 'r', encoding='utf-8') as jsonfile:
+                data = json.load(jsonfile)
+                if isinstance(data, list):
+                    for index, item in enumerate(data):
+                        content = json.dumps(item, indent=2)
+                        doc = Document(
+                            page_content=content,
+                            metadata={
+                                "source": file_path,
+                                "index": index
+                            }
+                        )
+                        documents.append(doc)
+                elif isinstance(data, dict):
+                    content = json.dumps(data, indent=2)
                     doc = Document(
                         page_content=content,
                         metadata={
-                            "source": file_path,
-                            "row": reader.line_num - 1  # Subtract 1 to account for header
+                            "source": file_path
                         }
                     )
                     documents.append(doc)
         except Exception as e:
-            logging.error(f"Error loading CSV {file_path}: {str(e)}")
+            logging.error(f"Error loading JSON {file_path}: {str(e)}")
         return documents
 
-    def load_csvs_from_directory(self, directory_path: str) -> List[Document]:
-        logging.debug(f"Loading CSVs from directory: {directory_path}")
+    def load_jsons_from_directory(self, directory_path: str) -> List[Document]:
+        logging.debug(f"Loading JSONs from directory: {directory_path}")
         all_documents = []
         for filename in os.listdir(directory_path):
-            if filename.endswith(".csv"):
+            if filename.endswith(".json"):
                 file_path = os.path.join(directory_path, filename)
-                documents = self.load_csv(file_path)
+                documents = self.load_json(file_path)
                 all_documents.extend(documents)
         return all_documents
     
@@ -268,31 +279,98 @@ def get_user_input():
     return cur_work, new_work, skills
 
 
-def main():
-    rag = RAGSingleton()
+# def main():
+#     rag = RAGSingleton()
 
-    # Load PDF
-    docs = rag.load_csvs_from_directory("data")
-    logging.info(f"Number of documents: {len(docs)}")
+#     # Load PDF
+#     docs = rag.load_jsons_from_directory("data")
+#     logging.info(f"Number of documents: {len(docs)}")
 
-    # Initialize LLM
-    rag.initialize_llm(provider=LLMProvider.GEMINI, project="gen-lang-client-0323803568")
+#     # Initialize LLM
+#     rag.initialize_llm(provider=LLMProvider.GEMINI, project="gen-lang-client-0323803568")
 
-    # Create vectorstore
-    rag.create_vectorstore(docs, True)
+#     # Create vectorstore
+#     rag.create_vectorstore(docs, True)
 
-    # Create RAG chain
-    rag.create_rag_chain(chain_type=ChainType.STUFF)
+#     # Create RAG chain
+#     rag.create_rag_chain(chain_type=ChainType.STUFF)
 
-    while True:
-        cur_work, new_work, skills = get_user_input()
+#     while True:
+#         cur_work, new_work, skills = get_user_input()
         
-        results = rag.query(cur_work, new_work, skills)
-        logging.info(print_result(cur_work, new_work, skills, results))
+#         results = rag.query(cur_work, new_work, skills)
+#         logging.info(print_result(cur_work, new_work, skills, results))
 
-        new_query = input("Do you have other queries? (y/n): ").lower()
-        if new_query != 'y':
-            break
+#         new_query = input("Do you have other queries? (y/n): ").lower()
+#         if new_query != 'y':
+#             break
+
+def main():
+    logging.info("Entering main function")
+    try:
+        rag = RAGSingleton()
+        logging.info("RAGSingleton initialized")
+
+        # Load JSON
+        logging.info("Loading JSON documents")
+        try:
+            docs = rag.load_jsons_from_directory("data")
+            logging.info(f"Number of documents: {len(docs)}")
+        except Exception as e:
+            logging.error(f"Error loading JSON documents: {str(e)}")
+            logging.debug(traceback.format_exc())
+            return
+
+        # Initialize LLM
+        logging.info("Initializing LLM")
+        try:
+            rag.initialize_llm(provider=LLMProvider.GEMINI, project="gen-lang-client-0323803568")
+            logging.info("LLM initialized")
+        except Exception as e:
+            logging.error(f"Error initializing LLM: {str(e)}")
+            logging.debug(traceback.format_exc())
+            return
+
+        # Create vectorstore
+        logging.info("Creating vectorstore")
+        try:
+            rag.create_vectorstore(docs, True)
+            logging.info("Vectorstore created")
+        except Exception as e:
+            logging.error(f"Error creating vectorstore: {str(e)}")
+            logging.debug(traceback.format_exc())
+            return
+
+        # Create RAG chain
+        logging.info("Creating RAG chain")
+        try:
+            rag.create_rag_chain(chain_type=ChainType.STUFF)
+            logging.info("RAG chain created")
+        except Exception as e:
+            logging.error(f"Error creating RAG chain: {str(e)}")
+            logging.debug(traceback.format_exc())
+            return
+
+        logging.info("Entering main loop")
+        while True:
+            try:
+                cur_work, new_work, skills = get_user_input()
+                results = rag.query(cur_work, new_work, skills)
+                logging.info(print_result(cur_work, new_work, skills, results))
+
+                new_query = input("Do you have other queries? (y/n): ").lower()
+                if new_query != 'y':
+                    break
+            except Exception as e:
+                logging.error(f"Error in main loop: {str(e)}")
+                logging.debug(traceback.format_exc())
+                break
+
+    except Exception as e:
+        logging.error(f"Unexpected error in main function: {str(e)}")
+        logging.debug(traceback.format_exc())
+
+    logging.info("Exiting main function")
 
 
 if __name__ == "__main__":
@@ -301,4 +379,5 @@ if __name__ == "__main__":
 
     logging.basicConfig(level=logging.DEBUG,
                         format="%(asctime)s %(levelname)s %(message)s")
+    print("Entering main function...")
     main()
