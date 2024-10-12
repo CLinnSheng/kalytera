@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/linnsheng/Desktop/hackhaton/kalytera/.venv"
+set -gx VIRTUAL_ENV "/home/linnsheng/Desktop/hackathon/kalytera/src/.venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
