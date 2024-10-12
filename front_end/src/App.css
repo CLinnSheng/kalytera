@@ -13,7 +13,7 @@ body {
   height: 100vh; /* Full viewport height */
   margin: 0; /* Remove default margins */
   padding: 0; /* Remove default padding */
-  background-image: url('src/assets/background_blue.jpg'); /* Path to your background image */
+  background-image: url('src/assets/Background_blue.jpg'); /* Path to your background image */
   background-size: cover; /* Cover the entire area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent repeating the image */
@@ -24,14 +24,10 @@ body {
   display: flex; /* Use Flexbox for children */
   width: 50vw; /* 50% of the viewport width */
   height: 50vh; /* 50% of the viewport height */
-  max-width: 800px; /* Max width limit */
-  max-height: 500px; /* Max height limit */
-  min-width: 300px; /* Min width limit */
-  min-height: 300px; /* Min height limit */
   background-color: white; /* Background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
-  transition: width 0.3s, height 0.3s; /* Smooth resizing */
   box-shadow: 0 0 10px 5px rgba(98, 98, 98, 0.5); /* Even shadow on all sides */
+  transition: all 0.5s ease; /* Smooth transition for all properties */
+
 }
 
 /* Additional styles for left and right sections */
@@ -101,6 +97,7 @@ body {
   font-size: 24px; /* Adjust the size as needed */
   letter-spacing: 3px; /* Increase space between letters */
   margin-bottom: 20px; /* Add space between h2 and inputs */
+  color: #005183;          /* Dark gray text color */
 }
 
 .logo-header {
@@ -122,6 +119,100 @@ body {
   font-size: 15px; /* Adjust the size as needed */
   letter-spacing: 1.5px; /* Increase space between letters */
   margin-bottom: 12px; /* Add space between h2 and inputs */
+  color:hsl(0, 0%, 0%);
+}
+
+.pagetwo-container {
+  display: flex; /* Use Flexbox for children */
+  width: 50vw; /* 50% of the viewport width */
+  height: 50vh; /* 50% of the viewport height */
+  background-color: white; /* Background color */
+  box-shadow: 0 0 10px 5px rgba(98, 98, 98, 0.5); /* Even shadow on all sides */
+  transition: all 0.5s ease; /* Smooth transition for all properties */
+  flex-direction: column; /* Arrange items in a column */
+  align-items: center; /* Center items horizontally */
+}
+
+.pagetwo-container h1 {
+  width: 100%;          /* Full width of the container */
+  text-align: left;   /* Center the text */
+  font-size: 40px;      /* Set a larger font size */
+  font-weight: bold;    /* Make the text bold */
+  margin-left: 5vh;
+  margin-top: 5vh;
+  margin-bottom: 1.8vh;
+  font-weight: 500; /* Make the font thinner (lighter weight) */
+  color: #005183;          /* Dark gray text color */
+  display: block;       /* Ensure it's a block element */
+  letter-spacing: 1.3px; /* Increase space between letters */
+}
+
+.pagetwo-container h2 {
+  width: 100%; /* Make headings full width */
+  text-align: left; /* Align text to the left */
+  margin-left: 10vh;
+  color: #070909; /* Dark gray text color */
+  font-weight: 300; /* Make the font thinner (lighter weight) */
+  font-size: 15px; /* Adjust font size if needed */
+  letter-spacing: 1.3px; /* Increase space between letters */
+
+}
+
+/* Apply box-sizing to include padding and borders in width */
+.pagetwo-container select,
+.pagetwo-container input {
+  
+  width: 90%; /* Width of input elements */
+  padding: 10px; /* Padding for input elements */
+  
+  /* Outline styling */
+  border: 2px solid rgba(0, 77, 121, 0.751); /* Blue border */
+  border-radius: 15px; /* Rounded corners */
+  outline: none; /* Remove the default outline */
+  box-sizing: border-box; /* Include padding and border in width */
+  margin-bottom: 1.5vh;
+
+  background-color: white; /* Set background color to white */
+  color: black; /* Set text color to black */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Optional: Change border color on focus */
+.pagetwo-container select:focus,
+.pagetwo-container input:focus {
+  border-color: darkblue; /* Dark blue when focused */
 }
 
 
+.pagetwo-container button {
+  background-color: #0077b3; /* Button background */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 20px; /* Rounded corners */
+  padding: 9px; /* Padding for button */
+  font-size: 16px; /* Font size */
+  letter-spacing: 2px; /* Increase space between letters */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+  width: 100%; /* Make button full width of its container */
+  max-width: 300px; /* Optional: Set a maximum width */
+  margin-top: 1vh;
+}
+
+.pagetwo-container button:hover {
+  background-color: hsl(227, 87%, 24%); /* Button hover effect */
+}
+
+.logo {
+  margin-top: 1.5vh;
+  margin-right: 2vh;
+  height: 60px; /* Adjust logo height */
+  width: auto; /* Keep logo's aspect ratio */
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Aligns items in the row with space between */
+  width: 100%;
+}
