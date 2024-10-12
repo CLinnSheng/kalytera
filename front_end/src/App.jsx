@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import './App.css'; // For styling
 
@@ -7,9 +7,9 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<LoginPage />} /> {/* Changed component prop to element */}
-          <Route path="/welcome" element={<WelcomePage />} /> {/* Changed component prop to element */}
-          <Route path="*" element={<Navigate to="/" />} /> {/* Redirect to the login page if no route matches */}
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/welcome" element={<WelcomePage />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
     </Router>
@@ -17,33 +17,72 @@ function App() {
 }
 
 function LoginPage() {
-  const navigate = useNavigate(); // Get navigate function
+  const navigate = useNavigate();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleLogin = (event) => {
-    event.preventDefault(); // Prevent form submission
-    // Navigate to the welcome page using navigate
-    navigate('/welcome'); // Use navigate instead of history.push
+  const handleLogin = async (event) => {
+    event.preventDefault();
+
+    const loginData = {
+      username: username,
+      password: password,
+    };
+
+    try {
+      const response = await fetch('http://localhost:5000/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(loginData),
+      });
+
+      const result = await response.json();
+
+        setErrorMessage('');
+        navigate('/welcome');
+
+    } catch (error) {
+      console.error('Error during login:', error);
+      setErrorMessage('An error occurred. Please try again.');
+    }
   };
-
-  return (
+  return (  
     <div className="login-container">
       <div className="login-left">
         <img src="src/assets/PSA_Logo.jpg" alt="PSA Logo" className="logo" />
         <h2>LOGIN</h2>
         <form onSubmit={handleLogin}>
-          <input type="text" placeholder="Username" required /><br />
-          <input type="password" placeholder="Password" required /><br />
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          /><br />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          /><br />
           <button type="submit">Login</button>
         </form>
+        {errorMessage && <p className="error-message">{errorMessage}</p>} {/* Display error message if any */}
       </div>
       <div className="login-right">
         <img src="src/assets/PSA_company_image2.jpg" alt="Company img" />
       </div>
     </div>
-  );
+  );``
 }
 
 function WelcomePage() {
+
+  const [currentPosition, setCurrentPosition] = useState('');
+  const [skills, setSkills] = useState('');
+  const [desiredPosition, setDesiredPosition] = useState('');
   // Define your roles in an array
   const roles = [
     '-- Select position --',
@@ -129,6 +168,29 @@ function WelcomePage() {
     'Technical Officer (Infrastructure Management)',
   ];
 
+const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const data = {
+      current_position: currentPosition,
+      skills,
+      desired_position: desiredPosition,
+    };
+
+    try {
+      const response = await fetch('http://localhost:5000/submit_data', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+      alert(result.message); // Show success message or handle errors
+    } catch (error) {
+      console.error('Error during data submission:', error);
+    }
+  };
+
   return (
     <div className="pagetwo-container">
       <div className="header">
@@ -136,37 +198,37 @@ function WelcomePage() {
         <img src="src/assets/PSA_Logo.jpg" alt="PSA Logo" className="logo" />
       </div>
       <h2 style={{ marginTop: '0px' }}>What is your current position?</h2>
-      <select>
-        {/* Map through the roles array to create option elements */}
-        {roles.map((role, index) => (
-          <option key={index} placeholder="Select a position" value={role.toLowerCase().replace(/\s+/g, '-')}>
-            {role}
-          </option>
-        ))}
-      </select>
+      <form onSubmit={handleSubmit}>
+        <select value={currentPosition} onChange={(e) => setCurrentPosition(e.target.value)} required>
+          {roles.map((role, index) => (
+            <option key={index} value={role}>
+              {role}
+            </option>
+          ))}
+        </select>
 
-      <h2 style={{ marginTop: '0px' }}>What are your current skills?</h2>
-      <input type="text" placeholder="Enter your skills" />
+        <h2 style={{ marginTop: '0px' }}>What are your current skills?</h2>
+        <input
+          type="text"
+          placeholder="Enter your skills"
+          value={skills}
+          onChange={(e) => setSkills(e.target.value)}
+          required
+        />
 
-      <h2 style={{ marginTop: '0px' }}>What is your desired position?</h2>
-      <select>
-        {/* Map through the roles array to create option elements */}
-        {roles.map((role, index) => (
-          <option key={index} placeholder="Select a position" value={role.toLowerCase().replace(/\s+/g, '-')}>
-            {role}
-          </option>
-        ))}
-      </select>
+        <h2 style={{ marginTop: '0px' }}>What is your desired position?</h2>
+        <select value={desiredPosition} onChange={(e) => setDesiredPosition(e.target.value)} required>
+          {roles.map((role, index) => (
+            <option key={index} value={role}>
+              {role}
+            </option>
+          ))}
+        </select>
 
-      <button type="submit">Next</button>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 }
-
-
-
-
-
-
 
 export default App;
