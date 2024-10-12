@@ -10,6 +10,10 @@ if "skill" not in st.session_state:
 
 if "current_position" not in st.session_state:
     st.session_state["current_position"] = ""
+
+if "next_position" not in st.session_state:
+    st.session_state["next_position"] = ""
+    
 #
 # st.title("Simple Streamlit App")
 #
@@ -38,7 +42,7 @@ st.markdown(
     
     
     .left-column {
-        background-image: url('https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg'); /* Replace this URL with your own image */
+        background-image: url('https://media.glassdoor.com/template/l/38189/psa-international-template-1634737289508.jpg'); /* Replace this URL with your own image */
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -77,11 +81,12 @@ def main():
 
     # Right column for input fields
     with col2:
-        st.title("Simple Streamlit App")
+        st.title("Kalytera")
 
-        skill = st.text_input("Enter skill to learn:", st.session_state["skill"])
-        current_position = st.text_input("What is your current position?", st.session_state["current_position"])
-
+        current_position = st.text_input("Current Job Title", st.session_state["current_position"])
+        skill = st.text_input("Skill Accquired", st.session_state["skill"])
+        next_position = st.text_input("Desired Job Position", st.session_state["next_position"])
+        
         submit = st.button("Submit")
         if submit:
             if not skill.strip() or not current_position.strip():
