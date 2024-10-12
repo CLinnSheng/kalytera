@@ -46,23 +46,6 @@ class RAGSingleton:
         self.rag_chain = None
         self.embeddings = self.initialize_embeddings(provider=LLMProvider.GEMINI)
         self.persist_directory = persist_directory
-
-    # def load_pdf(self, file_path):
-    #     logging.debug(f"Loading PDF: {file_path}")
-    #     loader = PyPDFLoader(file_path)
-    #     return loader.load()
-
-    # def load_pdfs_from_directory(self, directory_path):
-    #     logging.debug(f"Loading PDFs from directory: {directory_path}")
-    #     pdfs: List[Document] = []
-    #     for filename in os.listdir(directory_path):
-    #         if not filename.endswith(".pdf"):
-    #             continue
-
-    #         file_path = os.path.join(directory_path, filename)
-    #         pdf = self.load_pdf(file_path)
-    #         pdfs.extend(pdf)
-    #     return pdfs
     
     def load_csv(self, file_path: str) -> List[Document]:
         logging.debug(f"Loading CSV: {file_path}")
@@ -233,17 +216,6 @@ Maintain a friendly and conversational tone. If the passage is irrelevant, feel 
                 return_source_documents=True,
             )
 
-    # def query(self, input_text):
-    #     if not self.rag_chain:
-    #         raise ValueError(
-    #             "RAG chain not initialized. Call create_rag_chain() first.")
-
-    #     result = self.rag_chain.invoke({"question": input_text})
-    #     result['cleaned_sources'] = list(set(
-    #         [f"File: {doc.metadata['source']} (p. {doc.metadata['page'] + 1})" for doc in result['source_documents']]))
-    #     result['answer'] = result['answer'].strip()
-    #     return result
-
     def query(self, cur_work, new_work, skills):
             input_text = f"""
 I am a {cur_work} and I wish to be a {new_work}. The skillsets that I have are {skills}. What else should I learn to 
@@ -326,17 +298,6 @@ def main():
 if __name__ == "__main__":
     from dotenv import load_dotenv
     load_dotenv()
-
-    # from utils.logs import get_next_log_filename
-    # log_directory = "logs"
-    # os.makedirs(log_directory, exist_ok=True)
-    # log_file = get_next_log_filename(log_directory, "run")
-    # logging.basicConfig(level=logging.DEBUG,
-    #                     format="%(asctime)s %(levelname)s %(message)s",
-    #                     handlers=[
-    #                         logging.FileHandler(log_file),
-    #                         logging.StreamHandler()
-    #                     ])
 
     logging.basicConfig(level=logging.DEBUG,
                         format="%(asctime)s %(levelname)s %(message)s")
