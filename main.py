@@ -14,20 +14,6 @@ if "current_position" not in st.session_state:
 
 if "new_position" not in st.session_state:
     st.session_state["new_position"] = ""
-#
-# st.title("Simple Streamlit App")
-#
-# name = st.text_input("Enter name:", st.session_state["name"])
-# colour = st.selectbox("Select your favourite colour", ["", "Red", "Green", "Blue"])
-#
-# submit = st.button("Submit")
-# if submit:
-#     st.session_state["name"] = name
-#     st.session_state["colour"] = colour
-#     st.switch_page("pages/Profile.py")
-#     st.write(f"You have entered {name} and favourite colour is {colour}")
-# Set up page layout to be wide
-# st.set_page_config(layout="wide")
 
 # Custom CSS to style the left column with a background image
 st.markdown(
@@ -97,17 +83,9 @@ def main():
                 st.session_state["current_position"] = current_position
                 st.session_state["new_position"] = new_position
                 response = ai(current_position, new_position, skill)
+                st.session_state["response"] = response
+                print(response)
                 st.switch_page("pages/Profile.py")
-                st.write(f"Hello {name} and {test}!")
-                st.write(f"""
-Current job: {current_position}\n
-Desired job: {new_position}\n
-Existing skills: {skill}\n
-\n
-\n
-Advices:\n 
-{response}
-""")
             
 
 
