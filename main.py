@@ -91,7 +91,6 @@ def main():
                 st.session_state["skill"] = skill
                 st.session_state["current_position"] = current_position
                 st.switch_page("pages/Profile.py")
-                st.write(f"Hello {name} and {test}!")
                 st.write(f"Skill to learn is {skill} and current job is {current_position}")
 
 

@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Apply the Roboto font to the entire application */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  background-image: url('src/assets/Background_blue.jpg'); /* Path to your background image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  
+}
+
+.login-container {
+  display: flex; /* Use Flexbox for children */
+  width: 50vw; /* 50% of the viewport width */
+  height: 70vh; /* 70% of the viewport height */
+  background-color: white; /* Background color */
+  box-shadow: 0 0 10px 5px rgba(98, 98, 98, 0.5); /* Even shadow on all sides */
+  transition: all 0.5s ease; /* Smooth transition for all properties */
+
+}
+
+/* Additional styles for left and right sections */
+.login-left {
+  flex: 1; /* Take up half the width */
+  padding: 40px; /* Add padding */
+  display: flex; /* Use Flexbox for vertical alignment */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+}
+
+.login-right {
+  flex: 1; /* Take up half the width */
+  display: flex; /* Use Flexbox for centering */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.login-right img {
+  width: 100%; /* Fill the width of the container */
+  height: 100%; /* Fill the height of the container */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  opacity: 1; /* Set image transparency to 70% */
+}
+
+/* Style for input fields (Username and Password) */
+.login-left input {
+  width: 100%; /* Full width */
+  padding: 10px 0; /* Padding to create space around the text */
+  border: none; /* Remove the default border */
+  border-bottom: 2px solid #ccc; /* Add a line at the bottom */
+  outline: none; /* Remove the default blue outline */
+  font-size: 16px; /* Adjust font size */
+  background-color: transparent; /* Make background transparent */
+}
+
+/* Change line color when input is focused */
+.login-left input:focus {
+  border-bottom: 2px solid #007bff; /* Line color on focus */
+  transition: border-bottom 0.3s ease; /* Smooth transition */
+}
+
+.login-left button {
+  background-color: #0077b3; /* Button background */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 20px; /* Rounded corners */
+  padding: 9px; /* Padding for button */
+  margin-top: 27px;
+  font-size: 16px; /* Font size */
+  letter-spacing: 2px; /* Increase space between letters */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+  width: 100%; /* Make button full width of its container */
+  max-width: 300px; /* Optional: Set a maximum width */
+}
+
+.login-left button:hover {
+  background-color: hsl(227, 87%, 24%); /* Button hover effect */
+}
+
+/* Apply Roboto specifically to the "Login" heading */
+.login-left h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700; /* Bold style */
+  font-size: 24px; /* Adjust the size as needed */
+  letter-spacing: 3px; /* Increase space between letters */
+  margin-bottom: 20px; /* Add space between h2 and inputs */
+  color: #005183;          /* Dark gray text color */
+}
+
+.logo-header {
+  display: flex; /* Use Flexbox for alignment */
+  align-items: left; /* Center items vertically */
+  margin-bottom: 20px; /* Space below the logo-header */
+}
+
+.logo {
+  width: 100%; /* Set width to 100% of its container */
+  max-width: 80px; /* Adjust max width to make the logo smaller */
+  margin-right: 5px; /* Space between logo and heading */
+  display: block; /* Ensure it's a block element */
+}
+
+.login-left input {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; /* Bold style */
+  font-size: 15px; /* Adjust the size as needed */
+  letter-spacing: 1.5px; /* Increase space between letters */
+  margin-bottom: 12px; /* Add space between h2 and inputs */
+  color:hsl(0, 0%, 0%);
+}
+
+.pagetwo-container {
+  display: flex; /* Use Flexbox for children */
+  width: 50vw; /* 50% of the viewport width */
+  height: 70vh; /* 70% of the viewport height */
+  background-color: white; /* Background color */
+  box-shadow: 0 0 10px 5px rgba(98, 98, 98, 0.5); /* Even shadow on all sides */
+  transition: all 0.5s ease; /* Smooth transition for all properties */
+  flex-direction: column; /* Arrange items in a column */
+  align-items: center; /* Center items horizontally */
+}
+
+.pagetwo-container h1 {
+  width: 100%;          /* Full width of the container */
+  text-align: left;   /* Center the text */
+  font-size: 40px;      /* Set a larger font size */
+  font-weight: bold;    /* Make the text bold */
+  margin-left: 5vh;
+  margin-top: 5vh;
+  margin-bottom: 1.8vh;
+  font-weight: 500; /* Make the font thinner (lighter weight) */
+  color: #005183;          /* Dark gray text color */
+  display: block;       /* Ensure it's a block element */
+  letter-spacing: 1.3px; /* Increase space between letters */
+}
+
+.pagetwo-container h2 {
+  width: 100%; /* Make headings full width */
+  text-align: left; /* Align text to the left */
+  margin-left: 10vh;
+  color: #070909; /* Dark gray text color */
+  font-weight: 300; /* Make the font thinner (lighter weight) */
+  font-size: 15px; /* Adjust font size if needed */
+  letter-spacing: 1.3px; /* Increase space between letters */
+
+}
+
+/* Apply box-sizing to include padding and borders in width */
+.pagetwo-container select,
+.pagetwo-container input {
+  
+  width: 90%; /* Width of input elements */
+  padding: 10px; /* Padding for input elements */
+  
+  /* Outline styling */
+  border: 2px solid rgba(0, 77, 121, 0.751); /* Blue border */
+  border-radius: 15px; /* Rounded corners */
+  outline: none; /* Remove the default outline */
+  box-sizing: border-box; /* Include padding and border in width */
+  margin-bottom: 1.5vh;
+
+  background-color: white; /* Set background color to white */
+  color: black; /* Set text color to black */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Optional: Change border color on focus */
+.pagetwo-container select:focus,
+.pagetwo-container input:focus {
+  border-color: darkblue; /* Dark blue when focused */
+}
+
+
+.pagetwo-container button {
+  background-color: #0077b3; /* Button background */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 20px; /* Rounded corners */
+  padding: 9px; /* Padding for button */
+  font-size: 16px; /* Font size */
+  letter-spacing: 2px; /* Increase space between letters */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+  width: 100%; /* Make button full width of its container */
+  max-width: 300px; /* Optional: Set a maximum width */
+  margin-top: 1vh;
+}
+
+.pagetwo-container button:hover {
+  background-color: hsl(227, 87%, 24%); /* Button hover effect */
+}
+
+.logo {
+  margin-top: 1.5vh;
+  margin-right: 2vh;
+  height: 60px; /* Adjust logo height */
+  width: auto; /* Keep logo's aspect ratio */
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Aligns items in the row with space between */
+  width: 100%;
+}

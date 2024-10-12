@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;  /* Set width to 100% */
+    background-color: rgb(255, 255, 255);
+    font-family: 'Merriweather';
+
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;  /* Fill the viewport height */
+    width: 100vw;  /* Set to 100% to fill the parent container */
+    box-sizing: border-box;
+}
+
+.recommendations-header {
+    position: relative;  /* Fixed position at the top of the page */
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    background-color: rgb(248, 248, 248);  /* Optional background color */
+    width: 100%;  /* Stretch across the screen */
+    box-sizing: border-box;  /* Include padding in the width */
+    /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);  Add shadow at the bottom */
+
+}
+
+/* .current-position{
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+} */
+
+.avatar {
+    margin: 2.5vh;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    border: 5px solid rgb(184, 126, 0); /* Add a gold border */
+}
+
+.sentence {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.welcome-text {
+    font-size: 60px;
+    font-weight: 800px;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    /* line-height: 1.25; */
+}
+
+.current-position{
+    font-size: 16px;
+    font-weight: bold;
+    color: grey;
+    margin: 0;
+    /* line-height: 1; */
+}
+
+.position-info {
+    width: 90%;  /* Make sure it spans the full width of the container */
+    margin-left: 5vw;
+    position: relative;
+    display: flex;
+    flex: 1;
+    height: 30px;
+    justify-content: center;  /* Space items evenly */
+    align-items: center;  /* Align items vertically */
+    background-color: #e5eff1;  /* Optional background color */
+    color: black;
+    border: none;
+    border-radius: 50px;
+}
+
+.input-container {
+    margin-top: 20px; /* Add space above the textbox */
+}
+
+.future-items-input {
+    width: 100%; /* Make it full width */
+    padding: 10px; /* Padding inside the textbox */
+    border: 2px solid #ccc; /* Gray border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in the width */
+    font-size: 16px; /* Font size */
+}
+
+/* Optional: Change border color on focus */
+.future-items-input:focus {
+    border-color: #0077b3; /* Change border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+.input-container{
+    margin-left: 5vh;
+    color: black;
+}
