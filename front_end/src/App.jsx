@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import './App.css'; // For styling
+import Recommendations from './Recommendations'; // Adjust the path as needed
+
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LoginPage />} /> {/* Changed component prop to element */}
           <Route path="/welcome" element={<WelcomePage />} /> {/* Changed component prop to element */}
+          <Route path="/recommendations" element={<Recommendations />} /> {/* Recommendations Page */}
           <Route path="*" element={<Navigate to="/" />} /> {/* Redirect to the login page if no route matches */}
         </Routes>
       </div>
@@ -45,6 +48,10 @@ function LoginPage() {
 
 function WelcomePage() {
   // Define your roles in an array
+  const navigate = useNavigate();  // Initialize the hook
+
+
+
   const roles = [
     '-- Select position --',
     'Assistant Operations Executive (Depot Management)',
@@ -128,6 +135,11 @@ function WelcomePage() {
     'Mechanical Engineer (M&E services)',
     'Technical Officer (Infrastructure Management)',
   ];
+  
+  const handleNextClick = (event) => {
+    event.preventDefault();  // Prevent form submission behavior
+    navigate('/recommendations');  // Use the navigate function to go to recommendations page
+  };
 
   return (
     <div className="pagetwo-container">
@@ -135,11 +147,11 @@ function WelcomePage() {
         <h1>Welcome to Kalytera</h1>
         <img src="src/assets/PSA_Logo.jpg" alt="PSA Logo" className="logo" />
       </div>
+
       <h2 style={{ marginTop: '0px' }}>What is your current position?</h2>
       <select>
-        {/* Map through the roles array to create option elements */}
         {roles.map((role, index) => (
-          <option key={index} placeholder="Select a position" value={role.toLowerCase().replace(/\s+/g, '-')}>
+          <option key={index} value={role}>
             {role}
           </option>
         ))}
@@ -150,23 +162,19 @@ function WelcomePage() {
 
       <h2 style={{ marginTop: '0px' }}>What is your desired position?</h2>
       <select>
-        {/* Map through the roles array to create option elements */}
         {roles.map((role, index) => (
-          <option key={index} placeholder="Select a position" value={role.toLowerCase().replace(/\s+/g, '-')}>
+          <option key={index} value={role}>
             {role}
           </option>
         ))}
       </select>
 
-      <button type="submit">Next</button>
+      <button type="submit" onClick={handleNextClick}>
+        Next
+      </button>
     </div>
   );
 }
-
-
-
-
-
 
 
 export default App;
