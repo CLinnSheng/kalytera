@@ -40,7 +40,6 @@ st.markdown(
         padding-left: 0px;
     }
     
-    
     .left-column {
         background-image: url('https://media.glassdoor.com/template/l/38189/psa-international-template-1634737289508.jpg'); /* Replace this URL with your own image */
         background-size: cover;
@@ -51,6 +50,7 @@ st.markdown(
         padding: 0; 
         margin: 0;
         border-radius: 10px;
+        filter: blur(8px); /* Apply blur effect */
     }
     
     .right-column {
