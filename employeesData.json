@@ -1,0 +1,496 @@
+{
+    {
+    "job_title": "Assistant Operations Executive (Depot Management)",
+    "years_of_experience": "2 years",
+    "email": "operations.assistant@company.com",
+    "qualifications": [
+        "Diploma in Logistics / Supply Chain Management",
+        "Other disciplines with experience in logistics operations management (preferable in 3rd party logistics, distribution or manufacturing environment)"
+    ],
+    "skillsets": [
+        "Proficiency in MS Office",
+        "Ability to work independently",
+        "Good communication skills",
+        "Monitor customer inventory and email correspondence",
+        "Monitor gate return and transshipment volumes",
+        "Handle equipment breakdowns",
+        "Coordinate RTG block activities",
+        "Respond to operational exceptions"
+    ],
+    "online_courses": [
+        "Microsoft Office 365 Essential Training",
+        "Logistics and Supply Chain Fundamentals",
+        "Effective Communication in the Workplace",
+        "Inventory Management for Logistics Professionals"
+    ]
+    },
+    {
+    "job_title": "Operations Executive / Senior Operations Executive (Port Ecosystem)",
+    "years_of_experience": "4 years",
+    "email": "port.operations@company.com",
+    "qualifications": [
+        "Degree in any discipline",
+        "Experience in logistics operations management (preferable in 3rd party logistics, trucking, distribution or manufacturing environment)"
+    ],
+    "skillsets": [
+        "Proficient in advanced MS Excel",
+        "Good communication and interpersonal skills",
+        "Ability to work independently",
+        "Critical thinking and analytical skills",
+        "Manage trucking permits and shipping documents",
+        "Conduct audit checks for compliance",
+        "Maintain ISO certification records",
+        "Work under pressure in changing environments"
+    ],
+    "online_courses": [
+        "Advanced Excel Skills for Data Analysis",
+        "Critical Thinking for Better Judgment and Decision-Making",
+        "ISO 9001: Quality Management System",
+        "Logistics and Trucking Operations Management"
+    ]
+    },
+    {
+    "job_title": "Senior Procurement Executive / Assistant Manager (Engineering Procurement)",
+    "years_of_experience": "3 years",
+    "email": "procurement.engineering@company.com",
+    "qualifications": [
+        "Degree in any discipline",
+        "Understanding of strategic sourcing, tendering, contract management and governance",
+        "Experience in sustainable procurement frameworks",
+        "Experience with e-procurement software (Ariba, Coupa, Oracle, Zycus)",
+        "CIPS certification (preferred)"
+    ],
+    "skillsets": [
+        "Excellent communication and negotiation skills",
+        "Contract drafting and management",
+        "Post-contract risk management",
+        "Collaboration with internal stakeholders",
+        "Drive innovation and change"
+    ],
+    "online_courses": [
+        "Strategic Sourcing and Procurement for Engineers",
+        "Contract Management Principles and Practices",
+        "Sustainable Procurement: Building a Better Future",
+        "Negotiation Skills for Procurement Professionals"
+    ]
+    },
+    {
+    "job_title": "Manager / Deputy Manager (OT Security Governance & Compliance)",
+    "years_of_experience": "5 years",
+    "email": "security.governance@company.com",
+    "qualifications": [
+        "Degree in Computer Engineering, Cybersecurity, or related fields",
+        "Cybersecurity experience in OT/ICS environments (preferred)",
+        "Relevant certifications (GICSP, CISSP, CISA, CISM)"
+    ],
+    "skillsets": [
+        "Knowledge of OT/IT security standards (NIST, IEC 62443, ISO27001/2)",
+        "Strong leadership and communication skills",
+        "Project management",
+        "Analytical and problem-solving skills"
+    ],
+    "online_courses": [
+        "OT and IT Security: Practical Applications",
+        "NIST Cybersecurity Framework Training",
+        "ISO 27001/27002 Information Security",
+        "Project Management Essentials for IT Professionals"
+    ]
+    },
+    {
+    "job_title": "Manager/Senior Manager (Commercial)",
+    "years_of_experience": "6 years",
+    "email": "commercial.manager@company.com",
+    "qualifications": [
+        "Degree in any discipline",
+        "Sales experience in Life Science, Healthcare, Industrial, Technology, Retail, Consumer, Chemical"
+    ],
+    "skillsets": [
+        "Proven track record in managing customer relationships",
+        "Sales lead generation and opportunity pursuit",
+        "Design pricing strategies",
+        "Market intelligence gathering",
+        "Strong interpersonal and negotiation skills",
+        "Adaptability and resilience"
+    ],
+    "online_courses": [
+        "Sales Management Foundations",
+        "Customer Relationship Management (CRM) for B2B Sales",
+        "Pricing Strategy for Products",
+        "Negotiation Skills for Sales Professionals"
+    ]
+    },
+    {
+    "job_title": "Assistant Manager/Deputy Manager (Commercial)",
+    "years_of_experience": "3 years",
+    "email": "assistant.manager@company.com",
+    "qualifications": [
+        "Degree in any discipline",
+        "Sales experience in Life Science, Healthcare, Industrial, Technology, Retail, Consumer, Chemical"
+    ],
+    "skillsets": [
+        "Proven customer relationship management",
+        "Sales lead generation and opportunity pursuit",
+        "Negotiation with customers",
+        "Coordination across teams (legal, finance, operations)",
+        "Strong interpersonal and communication skills",
+        "Critical thinking and problem-solving"
+    ],
+    "online_courses": [
+        "B2B Sales Foundations",
+        "Negotiation Strategies for Business Deals",
+        "Customer Success Management",
+        "Critical Thinking and Problem Solving for Business"
+    ]
+    },
+    {
+    "job_title": "ITE Scholarship - Infocomm Technology Track",
+    "years_of_experience": "1 year",
+    "email": "ite.scholarship@company.com",
+    "qualifications": [
+        "Current ITE student or within 12 months of graduation",
+        "Good academic performance"
+    ],
+    "skillsets": [
+        "Strong adaptability to dynamic work environments",
+        "Willingness to perform 24/7 standby",
+        "Hands-on experience through internships",
+        "Prepared for structured development programs"
+    ],
+    "online_courses": [
+        "Introduction to IT Project Management",
+        "Adaptive Learning and Growth in Dynamic Work Environments",
+        "Introduction to Standby Operations in IT"
+    ]
+    },
+    {
+    "job_title": "Polytechnic Scholarship - Infocomm Technology Track",
+    "years_of_experience": "1 year",
+    "email": "poly.scholarship@company.com",
+    "qualifications": [
+        "Current polytechnic student or within 12 months of graduation",
+        "Good academic performance in IT-related courses"
+    ],
+    "skillsets": [
+        "Proficiency in programming languages or IT systems",
+        "Analytical, communication, and teamwork skills",
+        "Adaptability to emerging technologies",
+        "Willingness to perform 24/7 standby or shift work"
+    ],
+    "online_courses": [
+        "Programming Fundamentals",
+        "Teamwork Skills for IT Professionals",
+        "Emerging Technologies and Their Impact on IT Systems",
+        "Shift Management and Adaptive Work Scheduling"
+    ]
+    },
+    {
+        "job_title": "Management Executive (Shared Services)",
+        "years_of_experience": 5,
+        "email": "shared.services@company.com",
+        "qualifications": "Possess a degree from a recognized university",
+        "skillsets": [
+          "Office management",
+          "Canteen management",
+          "Inventory management",
+          "Finance administration",
+          "Purchase administration",
+          "Team leadership",
+          "Multitasking",
+          "Collaboration",
+          "Microsoft Office"
+        ],
+        "online_courses": [
+          "Office Management Essentials",
+          "Inventory Management for Office Supplies",
+          "Finance and Contract Administration",
+          "Project Management and Team Leadership",
+          "Microsoft Office Proficiency: Word, Excel, PowerPoint"
+        ]
+      },
+      {
+        "job_title": "Deputy Manager (Port Ecosystem Commercial)",
+        "years_of_experience": 4,
+        "email": "port.ecosystem@company.com",
+        "qualifications": "Degree in any discipline",
+        "skillsets": [
+          "Sales",
+          "Pricing strategies",
+          "Process mapping",
+          "Contract negotiation",
+          "Market intelligence",
+          "Presentation",
+          "Pipeline management",
+          "Relationship management",
+          "Microsoft Office"
+        ],
+        "online_courses": [
+          "Sales Strategies and Negotiation Skills",
+          "Market Intelligence and Competitive Research",
+          "Process Mapping for Business Optimization",
+          "Effective Presentation and Communication Skills",
+          "Microsoft Office Proficiency: Word, Excel, PowerPoint"
+        ]
+      },
+      {
+        "job_title": "Assistant Manager/Deputy Manager (Corporate & Direct Purchase)",
+        "years_of_experience": 3,
+        "email": "corp.purchase@company.com",
+        "qualifications": "Possess a degree with at least 3 years of experience in sourcing and procurement",
+        "skillsets": [
+          "Strategic sourcing",
+          "Contract management",
+          "Contract negotiation",
+          "e-Procurement platforms",
+          "Communication",
+          "Collaboration",
+          "Innovation",
+          "Microsoft Office"
+        ],
+        "online_courses": [
+          "Strategic Sourcing and Procurement Management",
+          "Contract Negotiation and Management",
+          "Using e-Procurement Platforms (Ariba, Coupa, Oracle)",
+          "Communication Skills for Professionals",
+          "Microsoft Office Proficiency: Word, Excel, PowerPoint"
+        ]
+      },
+      {
+        "job_title": "AI Analyst (Simulation)",
+        "years_of_experience": 2,
+        "email": "ai.simulation@company.com",
+        "qualifications": "A good degree in Computer Science, Industrial & Systems Engineering, or related field",
+        "skillsets": [
+          "C++",
+          "Python",
+          "Discrete event simulation",
+          "Optimization",
+          "Problem-solving",
+          "Teamwork",
+          "Communication"
+        ],
+        "online_courses": [
+          "C++ Programming for AI",
+          "Python for Data Science and AI",
+          "Discrete Event Simulation and Modeling",
+          "Optimization Techniques in Engineering",
+          "Effective Problem-Solving in AI"
+        ]
+      },
+      {
+        "job_title": "Procurement Assistant",
+        "years_of_experience": 1,
+        "email": "procurement.assistant@company.com",
+        "qualifications": "Possess Diploma in any discipline",
+        "skillsets": [
+          "Purchasing",
+          "Microsoft Office",
+          "Time management",
+          "Negotiation",
+          "Communication"
+        ],
+        "online_courses": [
+          "Basics of Purchasing and Procurement",
+          "Time Management Essentials",
+          "Microsoft Office Proficiency: Word, Excel",
+          "Effective Negotiation Skills",
+          "Professional Communication Skills"
+        ]
+      },
+      {
+        "job_title": "Assistant Manager/Deputy Manager (Depot Management)",
+        "years_of_experience": 3,
+        "email": "depot.management@company.com",
+        "qualifications": "Good communication skills and analytical skills",
+        "skillsets": [
+          "Data handling",
+          "Stakeholder management",
+          "Communication",
+          "Team player",
+          "Legal contract basics",
+          "Microsoft Office"
+        ],
+        "online_courses": [
+          "Data Management and Analysis",
+          "Stakeholder Communication and Relationship Management",
+          "Understanding Legal Contracts",
+          "Microsoft Office Proficiency: Word, Excel, PowerPoint"
+        ]
+      },
+      {
+        "job_title": "Deputy Manager / Manager (Automobile Terminal)",
+        "years_of_experience": 5,
+        "email": "auto.terminal@company.com",
+        "qualifications": "Degree in a relevant field with experience in automobile terminal operations",
+        "skillsets": [
+          "Operational analysis",
+          "Business development",
+          "Team leadership",
+          "Customer relationship management",
+          "Safety compliance",
+          "Microsoft Office"
+        ],
+        "online_courses": [
+          "Automobile Terminal Operations and Management",
+          "Business Development Strategies",
+          "Leadership and Team Management",
+          "Customer Relationship Management",
+          "Safety Compliance and Best Practices"
+        ]
+      },
+      {
+        "job_title": "Management Executive (Shared Services)",
+        "years_of_experience": 5,
+        "email": "shared.services@company.com",
+        "qualifications": "Possess a degree from a recognized university",
+        "skillsets": [
+          "Office management",
+          "Canteen management",
+          "Inventory management",
+          "Finance administration",
+          "Purchase administration",
+          "Team leadership",
+          "Multitasking",
+          "Collaboration",
+          "Microsoft Office"
+        ],
+        "online_courses": [
+          "Office Management Essentials",
+          "Inventory Management for Office Supplies",
+          "Finance and Contract Administration",
+          "Project Management and Team Leadership",
+          "Microsoft Office Proficiency: Word, Excel, PowerPoint"
+        ]
+      },
+      {
+        "job_title": "Deputy Manager (Port Ecosystem Commercial)",
+        "years_of_experience": 4,
+        "email": "port.ecosystem@company.com",
+        "qualifications": "Degree in any discipline",
+        "skillsets": [
+          "Sales",
+          "Pricing strategies",
+          "Process mapping",
+          "Contract negotiation",
+          "Market intelligence",
+          "Presentation",
+          "Pipeline management",
+          "Relationship management",
+          "Microsoft Office"
+        ],
+        "online_courses": [
+          "Sales Strategies and Negotiation Skills",
+          "Market Intelligence and Competitive Research",
+          "Process Mapping for Business Optimization",
+          "Effective Presentation and Communication Skills",
+          "Microsoft Office Proficiency: Word, Excel, PowerPoint"
+        ]
+      },
+      {
+        "job_title": "Assistant Manager/Deputy Manager (Corporate & Direct Purchase)",
+        "years_of_experience": 3,
+        "email": "corp.purchase@company.com",
+        "qualifications": "Possess a degree with at least 3 years of experience in sourcing and procurement",
+        "skillsets": [
+          "Strategic sourcing",
+          "Contract management",
+          "Contract negotiation",
+          "e-Procurement platforms",
+          "Communication",
+          "Collaboration",
+          "Innovation",
+          "Microsoft Office"
+        ],
+        "online_courses": [
+          "Strategic Sourcing and Procurement Management",
+          "Contract Negotiation and Management",
+          "Using e-Procurement Platforms (Ariba, Coupa, Oracle)",
+          "Communication Skills for Professionals",
+          "Microsoft Office Proficiency: Word, Excel, PowerPoint"
+        ]
+      },
+      {
+        "job_title": "AI Analyst (Simulation)",
+        "years_of_experience": 2,
+        "email": "ai.simulation@company.com",
+        "qualifications": "A good degree in Computer Science, Industrial & Systems Engineering, or related field",
+        "skillsets": [
+          "C++",
+          "Python",
+          "Discrete event simulation",
+          "Optimization",
+          "Problem-solving",
+          "Teamwork",
+          "Communication"
+        ],
+        "online_courses": [
+          "C++ Programming for AI",
+          "Python for Data Science and AI",
+          "Discrete Event Simulation and Modeling",
+          "Optimization Techniques in Engineering",
+          "Effective Problem-Solving in AI"
+        ]
+      },
+      {
+        "job_title": "Procurement Assistant",
+        "years_of_experience": 1,
+        "email": "procurement.assistant@company.com",
+        "qualifications": "Possess Diploma in any discipline",
+        "skillsets": [
+          "Purchasing",
+          "Microsoft Office",
+          "Time management",
+          "Negotiation",
+          "Communication"
+        ],
+        "online_courses": [
+          "Basics of Purchasing and Procurement",
+          "Time Management Essentials",
+          "Microsoft Office Proficiency: Word, Excel",
+          "Effective Negotiation Skills",
+          "Professional Communication Skills"
+        ]
+      },
+      {
+        "job_title": "Assistant Manager/Deputy Manager (Depot Management)",
+        "years_of_experience": 3,
+        "email": "depot.management@company.com",
+        "qualifications": "Good communication skills and analytical skills",
+        "skillsets": [
+          "Data handling",
+          "Stakeholder management",
+          "Communication",
+          "Team player",
+          "Legal contract basics",
+          "Microsoft Office"
+        ],
+        "online_courses": [
+          "Data Management and Analysis",
+          "Stakeholder Communication and Relationship Management",
+          "Understanding Legal Contracts",
+          "Microsoft Office Proficiency: Word, Excel, PowerPoint"
+        ]
+      },
+      {
+        "job_title": "Deputy Manager / Manager (Automobile Terminal)",
+        "years_of_experience": 5,
+        "email": "auto.terminal@company.com",
+        "qualifications": "Degree in a relevant field with experience in automobile terminal operations",
+        "skillsets": [
+          "Operational analysis",
+          "Business development",
+          "Team leadership",
+          "Customer relationship management",
+          "Safety compliance",
+          "Microsoft Office"
+        ],
+        "online_courses": [
+          "Automobile Terminal Operations and Management",
+          "Business Development Strategies",
+          "Leadership and Team Management",
+          "Customer Relationship Management",
+          "Safety Compliance and Best Practices"
+        ]
+      }
+    
+}
+  
