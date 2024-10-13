@@ -7,17 +7,20 @@ export default function Recommendations(){
 
     return (
         <div className="container">
-
+            <div className="top-bar">
+                <img src="src/assets/PSA_Logo copy.png" alt="PSA Logo" className="logo3r" />
+                <img src="src/assets/bars.png" alt="bars" className="bars" />
+            </div>
             <div className="recommendations-header">
                 <img src={Avatar} alt="avatar" className="avatar" />
                 <div className = "welcome-text">
-                <span className="welcome-text">Welcome, Karen</span>
+                <span className="welcome-text">Welcome, Chelsea</span>
                 <div className="current-position">IT Manager</div>
                 </div>
             </div>
 
             <div className="input-container">
-                <p>INSERT TEXT HERE</p> 
+                <p>INSERT TEXT HERE</p>
             </div>
         </div>
     );

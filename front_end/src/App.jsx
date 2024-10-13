@@ -50,8 +50,6 @@ function WelcomePage() {
   // Define your roles in an array
   const navigate = useNavigate();  // Initialize the hook
 
-
-
   const roles = [
     '-- Select position --',
     'Assistant Operations Executive (Depot Management)',
@@ -135,7 +133,7 @@ function WelcomePage() {
     'Mechanical Engineer (M&E services)',
     'Technical Officer (Infrastructure Management)',
   ];
-  
+
   const handleNextClick = (event) => {
     event.preventDefault();  // Prevent form submission behavior
     navigate('/recommendations');  // Use the navigate function to go to recommendations page

@@ -17,35 +17,40 @@ body, html {
     display: flex;
     align-items: center;
     padding: 0px;
-    background-color: rgb(248, 248, 248);  /* Optional background color */
+    background-color: rgb(255, 255, 255);  /* Optional background color */
     width: 100%;  /* Stretch across the screen */
     box-sizing: border-box;  /* Include padding in the width */
-    /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);  Add shadow at the bottom */
+    z-index: 1;
+    height: 30vh;
+
 
 }
 
 .current-position{
     font-size: 22px;
-    color: rgb(0, 0, 0);
+    margin-left: 1vh;
+    color: rgba(0, 0, 0, 0.492);
 }
 
 .avatar {
-    margin: 2.5vh;
+    margin: 5vh;
     width: 20vh;
     height: 20vh;
     border-radius: 50%;
-    border: 5px solid rgb(184, 126, 0); /* Add a gold border */
 }
 
 
 .welcome-text {
     font-size: 60px;
     font-weight: 800px;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 67, 119);
 }
 
 .container {
-    background-color: rgb(255, 255, 255);
+    background-image: url('src/assets/Background_white.jpg'); /* Path to your background image */
+    background-size: cover; /* Scales the image to cover the container without distortion */
+    background-position: top; /* Ensures the image is centered */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
     height: 100vh;  /* Fill the viewport height */
     width: 100vw;  /* Set to 100% to fill the parent container */
     box-sizing: border-box;
@@ -88,4 +93,46 @@ body, html {
 .input-container{
     margin-left: 5vh;
     color: black;
+}
+
+.top-bar {
+    height: 7vh;
+    background-color: #ffffff;
+    position: relative;
+    justify-content: space-between;
+    display: flex; /* Flexbox for easy alignment */
+    align-items: flex-start; /* Align items to the top */
+    z-index: 10;
+    box-shadow: 0px 2px 20px rgba(4, 69, 113, 0.214); 
+
+
+}
+
+.top-bar img {
+    margin-left: 3vh;
+    height: 100%; /* Ensure the image height fits within the bar */
+    object-fit: contain; /* Scale image without distortion */
+}
+
+.top-bar img.bars {
+    margin-right: 3vh;
+    margin-top: 1.2vh;
+    height: 70%; /* Ensure the image height fits within the bar */
+    object-fit: contain; /* Scale image without distortion */
+}
+
+.input-container p {
+    padding-left: 25px;          /* Add some padding inside the border */
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 5vh;
+    border-radius:0px;    /* Optional: adds rounded corners to the border */
+    color: rgb(0, 0, 0);           /* Set text color to white for contrast */
+    background-color: rgba(255, 255, 255, 0.851); /* Optional: a semi-transparent background for readability */
+    box-shadow: 0px 2px 20px rgba(4, 69, 113, 0.214); 
+    line-height: 2; /* Adjust line height (1.5 times the font size) */
+    border-radius: 20px; /* Rounded corners */
+
+
 }
