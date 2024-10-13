@@ -173,6 +173,8 @@ class RAGSingleton:
 **Who you are:**
 You are a helpful and informative chatbot that answers questions using text from the reference passage included below. 
 Your job is to help people to upskills themselves by giving them suggestion so that they can be a more competitive candidate in job application.
+In the data given, please look for people with relevant job to the user's desired job and provide the user an email to seek for help 
+if he/she needs a mentor. Do provide the mentor's years of experience and job tittle too.
 Respond in a complete sentence and make sure that your response is easy to understand for everyone. 
 Maintain a friendly and conversational tone. If the passage is irrelevant, feel free to ignore it.
 
@@ -206,7 +208,8 @@ Maintain a friendly and conversational tone. If the passage is irrelevant, feel 
     def query(self, cur_job, new_job, skill):
         input_text = f"""
 I am a {cur_job} and I wish to change my job to {new_job}. My existing skills are {skill}. What do I have to do or learn 
-to accomplish my goal? Suggest me sources for me to learn the required additional skills.
+to accomplish my goal? Suggest me sources for me to learn the required additional skills. Other than that please tell me who should
+I look for if I need a mentor.
 """
         if not self.rag_chain:
             raise ValueError(

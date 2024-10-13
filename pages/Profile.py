@@ -4,10 +4,7 @@ from main import main
 current_position = st.session_state["current_position"]
 skill = st.session_state["skill"]
 new_position = st.session_state["new_position"]
-print(new_position)
 response = st.session_state["response"]
-print("###")
-print(new_position)
 
 st.title("Here are some advices from Kalytera!")
 st.markdown(f"""
