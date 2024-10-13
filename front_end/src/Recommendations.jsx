@@ -41,20 +41,22 @@ export default function Recommendations({username}){
 
     return (
         <div className="container">
-
+            <div className="top-bar">
+                <img src="src/assets/PSA_Logo copy.png" alt="PSA Logo" className="logo3r" />
+                <img src="src/assets/bars.png" alt="bars" className="bars" />           
+             </div>
             <div className="recommendations-header">
                 <img src={Avatar} alt="avatar" className="avatar" />
                 <div className = "welcome-text">
-                <span className="welcome-text">Welcome, {userData.username}</span>
+                <span className="welcome-text">Hello, {userData.username}</span>
                 <div className="current-position">{userData.current_position}</div>
                 </div>
             </div>
-
+            <div className="my-info">
+                <p><strong>Desired Position:</strong> {userData.desired_position}</p>
+            </div>
             <div className="input-container">
-                <h2>Your Information:</h2>
-                    <p><strong>Skills:</strong> {userData.skills}</p>
-                    <p><strong>Desired Position:</strong> {userData.desired_position}</p>
-                    <p><strong>Advices:</strong> {userData.ai_response}</p>
+                    <p>{userData.ai_response}</p>
             </div>
         </div>
     );

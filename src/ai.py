@@ -235,10 +235,8 @@ Mentor:
         input_text = f"""
 I am a {cur_job} and I wish to change my job to {new_job}. My existing skills are {skill}. What do I have to do or learn 
 to accomplish my goal? Suggest me sources for me to learn the required additional skills. Other than that please tell me who should
-I look for if I need a mentor.
-Please give me the answer in this format:
-Online Courses:
-Mentor:
+I look for if I need a mentor. Please give your generated advices in the following format:
+Give me in the format as you are speaking to someone and dont givme json format, just in text and dont bold it or '*' this character.
 """
         if not self.rag_chain:
             raise ValueError(
@@ -248,6 +246,8 @@ Mentor:
         result['cleaned_sources'] = list(set(
             [f"File: {doc.metadata['source']}" for doc in result['source_documents']]))
         result['answer'] = result['answer'].strip()
+        
+        result['answer'] = remove_special_chars(result['answer'])
         return result
 
 
@@ -270,6 +270,11 @@ def print_result(cur_job, new_job, skill, result):
     """
     return (output_text)
 
+def remove_special_chars(input_string):
+    chars_to_remove = '*[]{}'
+    for char in chars_to_remove:
+        input_string = input_string.replace(char, '')
+    return input_string
 
 def ai(cur_job, new_job, skill):
     load_dotenv(Path('../env'))

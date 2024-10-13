@@ -130,7 +130,6 @@ body {
   box-shadow: 0 0 10px 5px rgba(98, 98, 98, 0.5); /* Even shadow on all sides */
   transition: all 0.5s ease; /* Smooth transition for all properties */
   flex-direction: column; /* Arrange items in a column */
-  align-items: center; /* Center items horizontally */
 }
 
 .pagetwo-container h1 {
@@ -150,7 +149,7 @@ body {
 .pagetwo-container h2 {
   width: 100%; /* Make headings full width */
   text-align: left; /* Align text to the left */
-  margin-left: 10vh;
+  margin-left: 5vh;
   color: #070909; /* Dark gray text color */
   font-weight: 300; /* Make the font thinner (lighter weight) */
   font-size: 15px; /* Adjust font size if needed */
@@ -171,6 +170,7 @@ body {
   outline: none; /* Remove the default outline */
   box-sizing: border-box; /* Include padding and border in width */
   margin-bottom: 1.5vh;
+  margin-left: 5vh;
 
   background-color: white; /* Set background color to white */
   color: black; /* Set text color to black */
@@ -197,6 +197,8 @@ body {
   width: 100%; /* Make button full width of its container */
   max-width: 300px; /* Optional: Set a maximum width */
   margin-top: 1vh;
+  margin-left: 5vh;
+
 }
 
 .pagetwo-container button:hover {
@@ -215,4 +217,10 @@ body {
   display: flex;
   justify-content: space-between; /* Aligns items in the row with space between */
   width: 100%;
+}
+
+.form{
+  align-items: center;
+  flex-direction: column;
+  margin-left: 10px;
 }

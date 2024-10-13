@@ -217,30 +217,35 @@ function WelcomePage({username}) {
   //       <img src="src/assets/PSA_Logo.jpg" alt="PSA Logo" className="logo" />
   //     </div>
 
-  //     <h2 style={{ marginTop: '0px' }}>What is your current position?</h2>
-  //     <select>
-  //       {roles.map((role, index) => (
-  //         <option key={index} value={role}>
-  //           {role}
-  //         </option>
-  //       ))}
-  //     </select>
+  //     <form onSubmit={handleNextClick}>
+  //       <h2>What is your current position?</h2>
+  //       <select value={currentPosition} onChange={(e) => setCurrentPosition(e.target.value)}>
+  //         {roles.map((role, index) => (
+  //           <option key={index} value={role}>
+  //             {role}
+  //           </option>
+  //         ))}
+  //       </select>
 
-  //     <h2 style={{ marginTop: '0px' }}>What are your current skills?</h2>
-  //     <input type="text" placeholder="Enter your skills" />
+  //       <h2>What are your current skills?</h2>
+  //       <input
+  //         type="text"
+  //         placeholder="Enter your skills"
+  //         value={skills}
+  //         onChange={(e) => setSkills(e.target.value)}
+  //       />
 
-  //     <h2 style={{ marginTop: '0px' }}>What is your desired position?</h2>
-  //     <select>
-  //       {roles.map((role, index) => (
-  //         <option key={index} value={role}>
-  //           {role}
-  //         </option>
-  //       ))}
-  //     </select>
+  //       <h2>What is your desired position?</h2>
+  //       <select value={desiredPosition} onChange={(e) => setDesiredPosition(e.target.value)}>
+  //         {roles.map((role, index) => (
+  //           <option key={index} value={role}>
+  //             {role}
+  //           </option>
+  //         ))}
+  //       </select>
 
-  //     <button type="submit" onClick={handleNextClick}>
-  //       Next
-  //     </button>
+  //       <button type="submit">Next</button>
+  //     </form>
   //   </div>
   // );
 
