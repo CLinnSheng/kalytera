@@ -29,12 +29,15 @@ Kalytera is the ultimate upskilling companion for PSA employees. It provides tai
   
 ## How it Works:
 1. **Login Page**: Users begin by entering their credentials (username and password). These are securely stored in the database.
-2. **Welcome Page**: Users provide information about their current position, skills, and their desired upskilling target position. This data is saved and passed to the backend.
-3. **Recommendations Page**: Kalytera uses AI, combined with a large language model trained on existing PSA employee data, to analyze the information and return personalized career path recommendations. 
-4. **Backend Process**: Data is queried from the database and optimized through our AI model to deliver actionable career advice tailored to each individual.
+![](https://github.com/CLinnSheng/kalytera/blob/main/images/Screenshot%20from%202024-10-13%2021-28-10.png)
+3. **Welcome Page**: Users provide information about their current position, skills, and their desired upskilling target position. This data is saved and passed to the backend.
+![](https://github.com/CLinnSheng/kalytera/blob/main/images/Screenshot%20from%202024-10-13%2021-27-59.png)
+5. **Recommendations Page**: Kalytera uses AI, combined with a large language model trained on existing PSA employee data, to analyze the information and return personalized career path recommendations.
+![](https://github.com/CLinnSheng/kalytera/blob/main/images/Screenshot%20from%202024-10-13%2021-27-16.png)
+7. **Backend Process**: Data is queried from the database and optimized through our AI model to deliver actionable career advice tailored to each individual.
 
 ## Technical Flowchart:
-![FlowChart](https://github.com/CLinnSheng/kalytera/blob/main/Kalytera%20App%20Structure%20Flowchart.png)
+![](https://github.com/CLinnSheng/kalytera/blob/main/images/Kalytera%20App%20Structure%20Flowchart.png)
 
 ## Summary
 In summary, **Kalytera** is a data-driven, inclusive platform that offers tailored upskilling pathways to employees, solving PSA’s challenge of optimizing human resources. By leveraging AI, we ensure that employees receive personalized career guidance based on their existing skills. 
