@@ -34,7 +34,8 @@ Kalytera is the ultimate upskilling companion for PSA employees. It provides tai
 4. **Backend Process**: Data is queried from the database and optimized through our AI model to deliver actionable career advice tailored to each individual.
 
 ## Technical Flowchart:
-![FlowChart](Kalytera App Structure Flowchart.png)
+![FlowChart](https://github.com/CLinnSheng/kalytera/blob/main/Kalytera%20App%20Structure%20Flowchart.png)
+
 ## Summary
 In summary, **Kalytera** is a data-driven, inclusive platform that offers tailored upskilling pathways to employees, solving PSA’s challenge of optimizing human resources. By leveraging AI, we ensure that employees receive personalized career guidance based on their existing skills. 
 
