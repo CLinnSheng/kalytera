@@ -9,6 +9,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.documents import Document
 from typing import List
 from enum import Enum
+from dotenv import load_dotenv
+from pathlib import Path
 import logging
 import os
 import json
@@ -70,21 +72,43 @@ class RAGSingleton:
         return documents
     
     def load_jsons_from_directory(self, directory_path: str) -> List[Document]:
-        logging.debug(f"Attempting to load JSONs from directory: {directory_path}")
+        logging.debug(f"Attempting to load JSONs from path: {directory_path}")
         logging.debug(f"Current working directory: {os.getcwd()}")
-        
-        if not os.path.exists(directory_path):
-            logging.error(f"Directory does not exist: {directory_path}")
-            raise FileNotFoundError(f"Directory does not exist: {directory_path}")
-        
+
+        # Get the root directory by navigating one level up from the script's location
+        script_dir = os.path.dirname(__file__)  # Directory of main.py
+        root_dir = os.path.abspath(os.path.join(script_dir, ".."))  # Go up one level to the root directory
+        logging.debug(f"Root directory: {root_dir}")
+
+        # Create the full path to the target directory or file
+        full_path = os.path.join(root_dir, directory_path)  # Append the directory_path to the root directory
+        logging.debug(f"Resolved full path: {full_path}")
+
+        if not os.path.exists(full_path):
+            logging.error(f"Path does not exist: {full_path}")
+            raise FileNotFoundError(f"Path does not exist: {full_path}")
+
         all_documents = []
-        for filename in os.listdir(directory_path):
-            if filename.endswith(".json"):
-                file_path = os.path.join(directory_path, filename)
-                documents = self.load_json(file_path)
+
+        # If the path is a file, load it directly
+        if os.path.isfile(full_path):
+            if full_path.endswith(".json"):
+                logging.debug(f"Loading JSON from file: {full_path}")
+                documents = self.load_json(full_path)
                 all_documents.extend(documents)
-        
-        logging.debug(f"Loaded {len(all_documents)} documents from {directory_path}")
+        elif os.path.isdir(full_path):
+            # If it's a directory, iterate over all JSON files
+            for filename in os.listdir(full_path):
+                if filename.endswith(".json"):
+                    file_path = os.path.join(full_path, filename)
+                    logging.debug(f"Loading JSON from file: {file_path}")
+                    documents = self.load_json(file_path)
+                    all_documents.extend(documents)
+        else:
+            logging.error(f"Path is neither a valid file nor directory: {full_path}")
+            raise ValueError(f"Invalid path: {full_path}")
+
+        logging.debug(f"Loaded {len(all_documents)} documents from {full_path}")
         return all_documents
 
     def initialize_llm(self, model="gemini-1.5-flash", temperature=0, project="gen-lang-client-0323803568"):
@@ -173,9 +197,13 @@ class RAGSingleton:
 **Who you are:**
 You are a helpful and informative chatbot that answers questions using text from the reference passage included below. 
 Your job is to help people to upskills themselves by giving them suggestion so that they can be a more competitive candidate in job application.
+In the data given, please look for people with relevant job to the user's desired job and provide the user an email to seek for help 
+if he/she needs a mentor. Do provide the mentor's years of experience and job tittle too.
 Respond in a complete sentence and make sure that your response is easy to understand for everyone. 
 Maintain a friendly and conversational tone. If the passage is irrelevant, feel free to ignore it.
-
+Please give me the answer in this format:
+Online Courses:
+Mentor:
 {summaries}
         """
         logging.debug(system_prompt)
@@ -206,7 +234,11 @@ Maintain a friendly and conversational tone. If the passage is irrelevant, feel 
     def query(self, cur_job, new_job, skill):
         input_text = f"""
 I am a {cur_job} and I wish to change my job to {new_job}. My existing skills are {skill}. What do I have to do or learn 
-to accomplish my goal? Suggest me sources for me to learn the required additional skills.
+to accomplish my goal? Suggest me sources for me to learn the required additional skills. Other than that please tell me who should
+I look for if I need a mentor.
+Please give me the answer in this format:
+Online Courses:
+Mentor:
 """
         if not self.rag_chain:
             raise ValueError(
@@ -240,6 +272,7 @@ def print_result(cur_job, new_job, skill, result):
 
 
 def ai(cur_job, new_job, skill):
+    load_dotenv(Path('../env'))
     rag = RAGSingleton()
 
     # Load PDF

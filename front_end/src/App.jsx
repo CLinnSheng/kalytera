@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import './App.css'; // For styling
 import Recommendations from './Recommendations'; // Adjust the path as needed
 
 
 function App() {
+
+  //
+  const [username, setUsername] = useState('');
+
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<LoginPage />} /> {/* Changed component prop to element */}
-          <Route path="/welcome" element={<WelcomePage />} /> {/* Changed component prop to element */}
-          <Route path="/recommendations" element={<Recommendations />} /> {/* Recommendations Page */}
+          <Route path="/" element={<LoginPage setUsername={setUsername}/>} /> {/* Changed component prop to element */}
+          <Route path="/welcome" element={<WelcomePage username={username}/>} /> {/* Changed component prop to element */}
+          <Route path="/recommendations" element={<Recommendations username={username} />} /> {/* Recommendations Page */}
           <Route path="*" element={<Navigate to="/" />} /> {/* Redirect to the login page if no route matches */}
         </Routes>
       </div>
@@ -19,14 +23,38 @@ function App() {
   );
 }
 
-function LoginPage() {
+function LoginPage({setUsername}) {
   const navigate = useNavigate(); // Get navigate function
+  //
+  const [localUsername, setLocalUsername] = useState('');
+  const [password, setPassword] = useState('')
+  //
 
   const handleLogin = (event) => {
     event.preventDefault(); // Prevent form submission
+    //
+    setUsername(localUsername);
+    //
     // Navigate to the welcome page using navigate
     navigate('/welcome'); // Use navigate instead of history.push
   };
+
+  // return (
+  //   <div className="login-container">
+  //     <div className="login-left">
+  //       <img src="src/assets/PSA_Logo.jpg" alt="PSA Logo" className="logo" />
+  //       <h2>LOGIN</h2>
+  //       <form onSubmit={handleLogin}>
+  //         <input type="text" placeholder="Username" required /><br />
+  //         <input type="password" placeholder="Password" required /><br />
+  //         <button type="submit">Login</button>
+  //       </form>
+  //     </div>
+  //     <div className="login-right">
+  //       <img src="src/assets/PSA_company_image2.jpg" alt="Company img" />
+  //     </div>
+  //   </div>
+  // );
 
   return (
     <div className="login-container">
@@ -34,8 +62,20 @@ function LoginPage() {
         <img src="src/assets/PSA_Logo.jpg" alt="PSA Logo" className="logo" />
         <h2>LOGIN</h2>
         <form onSubmit={handleLogin}>
-          <input type="text" placeholder="Username" required /><br />
-          <input type="password" placeholder="Password" required /><br />
+          <input 
+            type="text" 
+            placeholder="Username" 
+            required 
+            value={localUsername}
+            onChange={(e) => setLocalUsername(e.target.value)}
+          /><br />
+          <input 
+            type="password" 
+            placeholder="Password" 
+            required 
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          /><br />
           <button type="submit">Login</button>
         </form>
       </div>
@@ -43,14 +83,18 @@ function LoginPage() {
         <img src="src/assets/PSA_company_image2.jpg" alt="Company img" />
       </div>
     </div>
-  );
+  );  
 }
 
-function WelcomePage() {
+function WelcomePage({username}) {
   // Define your roles in an array
   const navigate = useNavigate();  // Initialize the hook
 
-
+  //
+  const [currentPosition, setCurrentPosition] = useState('');
+  const [skills, setSkills] = useState('');
+  const [desiredPosition, setDesiredPosition] = useState('');
+  //
 
   const roles = [
     '-- Select position --',
@@ -136,10 +180,69 @@ function WelcomePage() {
     'Technical Officer (Infrastructure Management)',
   ];
   
-  const handleNextClick = (event) => {
-    event.preventDefault();  // Prevent form submission behavior
-    navigate('/recommendations');  // Use the navigate function to go to recommendations page
+  // const handleNextClick = (event) => {
+  //   event.preventDefault();  // Prevent form submission behavior
+  //   navigate('/recommendations');  // Use the navigate function to go to recommendations page
+  // };
+
+  const handleNextClick = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch('http://localhost:5000/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username,
+          currentPosition,
+          skills,
+          desiredPosition,
+        }),
+      });
+      if (response.ok) {
+        navigate('/recommendations');
+      } else {
+        console.error('Failed to submit data');
+      }
+    } catch (error) {
+      console.error('Error: ', error);
+    }
   };
+
+  // return (
+  //   <div className="pagetwo-container">
+  //     <div className="header">
+  //       <h1>Welcome to Kalytera</h1>
+  //       <img src="src/assets/PSA_Logo.jpg" alt="PSA Logo" className="logo" />
+  //     </div>
+
+  //     <h2 style={{ marginTop: '0px' }}>What is your current position?</h2>
+  //     <select>
+  //       {roles.map((role, index) => (
+  //         <option key={index} value={role}>
+  //           {role}
+  //         </option>
+  //       ))}
+  //     </select>
+
+  //     <h2 style={{ marginTop: '0px' }}>What are your current skills?</h2>
+  //     <input type="text" placeholder="Enter your skills" />
+
+  //     <h2 style={{ marginTop: '0px' }}>What is your desired position?</h2>
+  //     <select>
+  //       {roles.map((role, index) => (
+  //         <option key={index} value={role}>
+  //           {role}
+  //         </option>
+  //       ))}
+  //     </select>
+
+  //     <button type="submit" onClick={handleNextClick}>
+  //       Next
+  //     </button>
+  //   </div>
+  // );
 
   return (
     <div className="pagetwo-container">
@@ -148,32 +251,38 @@ function WelcomePage() {
         <img src="src/assets/PSA_Logo.jpg" alt="PSA Logo" className="logo" />
       </div>
 
-      <h2 style={{ marginTop: '0px' }}>What is your current position?</h2>
-      <select>
-        {roles.map((role, index) => (
-          <option key={index} value={role}>
-            {role}
-          </option>
-        ))}
-      </select>
+      <form onSubmit={handleNextClick}>
+        <h2>What is your current position?</h2>
+        <select value={currentPosition} onChange={(e) => setCurrentPosition(e.target.value)}>
+          {roles.map((role, index) => (
+            <option key={index} value={role}>
+              {role}
+            </option>
+          ))}
+        </select>
 
-      <h2 style={{ marginTop: '0px' }}>What are your current skills?</h2>
-      <input type="text" placeholder="Enter your skills" />
+        <h2>What are your current skills?</h2>
+        <input
+          type="text"
+          placeholder="Enter your skills"
+          value={skills}
+          onChange={(e) => setSkills(e.target.value)}
+        />
 
-      <h2 style={{ marginTop: '0px' }}>What is your desired position?</h2>
-      <select>
-        {roles.map((role, index) => (
-          <option key={index} value={role}>
-            {role}
-          </option>
-        ))}
-      </select>
+        <h2>What is your desired position?</h2>
+        <select value={desiredPosition} onChange={(e) => setDesiredPosition(e.target.value)}>
+          {roles.map((role, index) => (
+            <option key={index} value={role}>
+              {role}
+            </option>
+          ))}
+        </select>
 
-      <button type="submit" onClick={handleNextClick}>
-        Next
-      </button>
+        <button type="submit">Next</button>
+      </form>
     </div>
   );
+
 }
 
 

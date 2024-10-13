@@ -85,7 +85,7 @@ def main():
                 response = ai(current_position, new_position, skill)
                 st.session_state["response"] = response
                 print(response)
-                st.switch_page("Profile.py")
+                st.switch_page("./pages/Profile.py")
             
 
 

@@ -4,3 +4,8 @@
 /data
 /rag.py
 /venv
+/.venv
+/src/.venv
+/src/env
+/env
+/src/cert.json
